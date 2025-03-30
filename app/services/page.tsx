@@ -35,7 +35,7 @@ export const metadata = {
   openGraph: {
     title: 'Services | Softwarerium',
     description: 'Tailored software solutions to elevate your digital presence across web, mobile, and desktop platforms.',
-    url: 'https://www.softwarerium.com/services',
+    url: 'https://sofwarerium.vercel.app/services',
     image: 'URL_TO_IMAGE', // Replace with an actual image URL
   },
   twitter: {
@@ -54,7 +54,7 @@ export default function Services() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://www.softwarerium.com',
+        url: 'https://sofwarerium.vercel.app',
         logo: 'URL_TO_LOGO', // Replace with your logo URL
         description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: [
@@ -75,13 +75,13 @@ export default function Services() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.softwarerium.com',
+            item: 'https://sofwarerium.vercel.app',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Services',
-            item: 'https://www.softwarerium.com/services',
+            item: 'https://sofwarerium.vercel.app/services',
           },
         ],
       },
@@ -97,7 +97,7 @@ export default function Services() {
           '@type': 'Offer',
           name: service.name,
           description: service.description,
-          url: `https://www.softwarerium.com/services/${service.slug}`,
+          url: `https://sofwarerium.vercel.app/services/${service.slug}`,
         })),
       },
     ],

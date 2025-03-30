@@ -80,7 +80,7 @@ export const metadata = {
   openGraph: {
     title: 'Softwarerium | Expert Software Solutions',
     description: 'Innovative software solutions for your business, from web development to mobile apps.',
-    url: 'https://www.softwarerium.com',
+    url: 'https://sofwarerium.vercel.app',
     image: 'URL_TO_IMAGE', // Replace with an actual image URL
   },
   twitter: {
@@ -99,7 +99,7 @@ export default function Home() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://www.softwarerium.com',
+        url: 'https://sofwarerium.vercel.app',
         logo: 'URL_TO_LOGO', // Replace with your logo URL
         description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: [
@@ -120,18 +120,18 @@ export default function Home() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.softwarerium.com',
+            item: 'https://sofwarerium.vercel.app',
           },
         ],
       },
       {
         '@type': 'WebSite',
-        url: 'https://www.softwarerium.com',
+        url: 'https://sofwarerium.vercel.app',
         name: 'Softwarerium',
         description: 'Softwarerium provides innovative software solutions including web development, mobile apps, and desktop applications.',
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://www.softwarerium.com/search?q={search_term_string}',
+          target: 'https://sofwarerium.vercel.app/search?q={search_term_string}',
           'query-input': 'required name=search_term_string',
         },
       },

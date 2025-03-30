@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: 'About Us | Softwarerium',
     description: 'Learn about Softwarerium’s passion for empowering businesses with cutting-edge web and software solutions.',
-    url: 'https://www.softwarerium.com/about',
+    url: 'https://sofwarerium.vercel.app/about',
     image: 'URL_TO_IMAGE', // Replace with an actual image URL
   },
   twitter: {
@@ -39,7 +39,7 @@ export default function About() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://www.softwarerium.com',
+        'url': 'https://sofwarerium.vercel.app',
         'logo': 'URL_TO_LOGO', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'foundingDate': '2025',
@@ -62,13 +62,13 @@ export default function About() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://www.softwarerium.com',
+            'item': 'https://sofwarerium.vercel.app',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'About',
-            'item': 'https://www.softwarerium.com/about',
+            'item': 'https://sofwarerium.vercel.app/about',
           },
         ],
       },
@@ -76,7 +76,7 @@ export default function About() {
         '@type': 'AboutPage',
         'name': 'About Softwarerium',
         'description': 'Discover Softwarerium’s journey, mission, and values. We’re a team dedicated to crafting innovative software and web solutions since 2025.',
-        'url': 'https://www.softwarerium.com/about',
+        'url': 'https://sofwarerium.vercel.app/about',
         'publisher': {
           '@type': 'Organization',
           'name': 'Softwarerium',

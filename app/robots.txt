@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /search/
+Disallow: /*?*  # Disallows URLs with query parameters (e.g., search results)
+
+Sitemap: https://sofwarerium.vercel.app/sitemap.xml

@@ -64,7 +64,7 @@ export const metadata = {
   openGraph: {
     title: 'Projects | Softwarerium',
     description: 'Discover our featured projects that highlight creativity, functionality, and cutting-edge technology.',
-    url: 'https://www.softwarerium.com/projects',
+    url: 'https://sofwarerium.vercel.app/projects',
     image: 'URL_TO_IMAGE', // Replace with an actual image URL
   },
   twitter: {
@@ -83,7 +83,7 @@ export default function Projects() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://www.softwarerium.com',
+        'url': 'https://sofwarerium.vercel.app',
         'logo': 'URL_TO_LOGO', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
@@ -104,13 +104,13 @@ export default function Projects() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://www.softwarerium.com',
+            'item': 'https://sofwarerium.vercel.app',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Projects',
-            'item': 'https://www.softwarerium.com/projects',
+            'item': 'https://sofwarerium.vercel.app/projects',
           },
         ],
       },
@@ -118,7 +118,7 @@ export default function Projects() {
         '@type': 'CollectionPage',
         'name': 'Projects by Softwarerium',
         'description': 'Explore Softwarerium’s signature projects showcasing expertise in web design, development, and innovative digital solutions.',
-        'url': 'https://www.softwarerium.com/projects',
+        'url': 'https://sofwarerium.vercel.app/projects',
         'publisher': {
           '@type': 'Organization',
           'name': 'Softwarerium',
@@ -127,8 +127,8 @@ export default function Projects() {
           '@type': 'CreativeWork',
           'name': project.title,
           'description': project.description,
-          'url': `https://www.softwarerium.com${project.link}`,
-          'image': `https://www.softwarerium.com${project.image}`,
+          'url': `https://sofwarerium.vercel.app${project.link}`,
+          'image': `https://sofwarerium.vercel.app${project.image}`,
         })),
       },
     ],

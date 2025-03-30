@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: 'Contact Us | Softwarerium',
     description: 'Contact Softwarerium to discuss your next project. We’re here to help with web, mobile, and more.',
-    url: 'https://www.softwarerium.com/contact',
+    url: 'https://sofwarerium.vercel.app/contact',
     image: 'URL_TO_IMAGE', // Replace with an actual image URL
   },
   twitter: {
@@ -38,7 +38,7 @@ export default function Contact() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://www.softwarerium.com',
+        'url': 'https://sofwarerium.vercel.app',
         'logo': 'URL_TO_LOGO', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
@@ -69,13 +69,13 @@ export default function Contact() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://www.softwarerium.com',
+            'item': 'https://sofwarerium.vercel.app',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Contact',
-            'item': 'https://www.softwarerium.com/contact',
+            'item': 'https://sofwarerium.vercel.app/contact',
           },
         ],
       },
@@ -83,7 +83,7 @@ export default function Contact() {
         '@type': 'ContactPage',
         'name': 'Contact Softwarerium',
         'description': 'Get in touch with Softwarerium for expert software solutions. Reach out via phone, email, or our contact form.',
-        'url': 'https://www.softwarerium.com/contact',
+        'url': 'https://sofwarerium.vercel.app/contact',
         'publisher': {
           '@type': 'Organization',
           'name': 'Softwarerium',
