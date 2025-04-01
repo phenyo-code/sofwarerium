@@ -1,37 +1,39 @@
+'use client'; // Make it a client component for form handling
+
 import Hero from '../components/Hero';
-import Link from 'next/link'; // Added for breadcrumbs
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaSpinner } from 'react-icons/fa';
+import { sendMail } from '../actions/sendMail'; // Adjust path
+import { useRef, useState, useTransition } from 'react';
 
 // Color Palette
 const colors = {
-  primary: '#6393FF',    // Vibrant Blue
-  black: '#1A1A1A',      // Deep Black
-  gray: '#4A4A4A',       // Medium Gray
-  lightGray: '#E5E7EB',  // Light Gray
-  white: '#FFFFFF',      // Pure White
-};
-
-// Metadata for this page
-export const metadata = {
-  title: 'Contact Us | Softwarerium',
-  description: 'Get in touch with Softwarerium for expert software solutions. Reach out via phone, email, or our contact form.',
-  keywords: 'contact Softwarerium, software solutions, web development, mobile apps, SEO, UI/UX design',
-  openGraph: {
-    title: 'Contact Us | Softwarerium',
-    description: 'Contact Softwarerium to discuss your next project. We’re here to help with web, mobile, and more.',
-    url: 'https://sofwarerium.vercel.app/contact',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
-  },
-  twitter: {
-    title: 'Contact Us | Softwarerium',
-    description: 'Reach out to Softwarerium for custom software solutions tailored to your needs.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
-    card: 'summary_large_image',
-  },
+  primary: '#6393FF',
+  black: '#1A1A1A',
+  gray: '#4A4A4A',
+  lightGray: '#E5E7EB',
+  white: '#FFFFFF',
 };
 
 export default function Contact() {
-  // JSON-LD Structured Data for Organization, Breadcrumbs, and Contact Page
+  const [status, setStatus] = useState<{ success: boolean; message?: string } | null>(null);
+  const formRef = useRef<HTMLFormElement>(null); // Add ref for form
+  const [isPending, startTransition] = useTransition(); // Add useTransition hook
+
+  const handleSubmit = async (formData: FormData) => {
+    startTransition(async () => {
+      const result = await sendMail(formData);
+      setStatus(result);
+
+      if (result.success) {
+        formRef.current?.reset(); // Reset form using ref
+        setTimeout(() => setStatus(null), 5000);
+      }
+    });
+  };
+
+  // JSON-LD unchanged (omitted for brevity)
+  // JSON-LD unchanged
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -39,7 +41,7 @@ export default function Contact() {
         '@type': 'Organization',
         'name': 'Softwarerium',
         'url': 'https://sofwarerium.vercel.app',
-        'logo': 'URL_TO_LOGO', // Replace with actual logo URL
+        'logo': 'URL_TO_LOGO',
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
           'https://twitter.com/softwarerium',
@@ -48,15 +50,15 @@ export default function Contact() {
         'contactPoint': [
           {
             '@type': 'ContactPoint',
-            'telephone': '+1-555-123-4567', // Replace with actual phone number
+            'telephone': '+1-555-123-4567',
             'contactType': 'Customer Service',
-            'email': 'info@softwarerium.com', // Replace with actual email
+            'email': 'info@softwarerium.com',
             'contactOption': 'TollFree',
             'areaServed': 'Worldwide',
           },
           {
             '@type': 'ContactPoint',
-            'email': 'info@softwarerium.com', // Replace with actual email
+            'email': 'info@softwarerium.com',
             'contactType': 'Sales',
             'areaServed': 'Worldwide',
           },
@@ -94,7 +96,6 @@ export default function Contact() {
 
   return (
     <div className="font-sans">
-      {/* JSON-LD Script */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -177,7 +178,7 @@ export default function Contact() {
           >
             Send Us a Message
           </h2>
-          <form className="space-y-6">
+          <form ref={formRef} action={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
@@ -239,12 +240,27 @@ export default function Contact() {
             <div className="text-center mt-4">
               <button
                 type="submit"
-                className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:bg-opacity-90"
+                disabled={isPending} // Disable button while sending
+                className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:bg-opacity-90 flex items-center justify-center mx-auto"
                 style={{ background: colors.primary, color: colors.white }}
               >
-                Submit Message
+                {isPending ? (
+                  <>
+                    <FaSpinner className="animate-spin mr-2" />
+                    Sending
+                  </>
+                ) : (
+                  'Submit Message'
+                )}
               </button>
             </div>
+            {status && (
+              <p
+                className={`text-center mt-4 ${status.success ? 'text-green-600' : 'text-red-600'}`}
+              >
+                {status.message}
+              </p>
+            )}
           </form>
         </div>
       </section>

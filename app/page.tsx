@@ -202,7 +202,7 @@ export default function Home() {
       {/* Hero Section */}
       <section aria-label="Softwarerium Home">
         <Hero
-          title="Softwarerium: Your Software Solutions Partner"
+          title="Softwarerium"
           description="Expert web development, mobile apps, and desktop applications designed to propel your business forward in 2025 through innovation and scalability."
           ctaText="Explore Our Projects"
           ctaLink="/projects"
