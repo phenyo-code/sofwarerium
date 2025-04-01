@@ -4,7 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes, FaPlus, FaMinus, FaChevronDown } from 'react-icons/fa';
+import { FaPlus, FaMinus, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { LiaTimesSolid } from 'react-icons/lia';
+import { CgMenuLeft } from 'react-icons/cg';
+import { useMenuState } from './HeaderContext'; // Adjust path
 
 // Base navigation links
 const navLinks = [
@@ -23,35 +26,40 @@ const serviceLinks = [
   { name: 'UI/UX Design', href: '/services/ui-ux-design' },
 ];
 
+// Custom hook to expose menu state
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false); // Desktop dropdown
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false); // Mobile submenu
+  const { isOpen, toggleMenu } = useMenuState();
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleServices = () => setIsServicesOpen(!isServicesOpen); // Desktop services toggle
-  const toggleMobileServices = () => setIsMobileServicesOpen(!isMobileServicesOpen); // Mobile services toggle
+  const toggleServices = () => setIsServicesOpen(!isServicesOpen);
+  const toggleMobileServices = () => setIsMobileServicesOpen(!isMobileServicesOpen);
+
+  const menuVariants = {
+    closed: { x: '100%' },
+    open: { x: 0 },
+  };
 
   return (
     <header className="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
       <div className="container mx-auto py-4 px-4 flex justify-between items-center">
-      <Link href="/">
-  {/* Desktop Logo (Gradient Text) */}
-  <span className="hidden md:block text-2xl font-bold bg-gradient-to-r from-black via-blue-500 to-blue-400 bg-clip-text text-transparent">
-    Softwarerium
-  </span>
+        <Link href="/">
+          {/* Desktop Logo (Gradient Text) */}
+          <span className="hidden md:block text-2xl font-bold bg-gradient-to-r from-black via-blue-500 to-blue-400 bg-clip-text text-transparent">
+            Softwarerium
+          </span>
 
-  {/* Mobile Logo (Next.js Image) */}
-  <div className="block md:hidden">
-    <Image
-      src="/logo2.png" // Update with the actual path to your logo
-      alt="Softwarerium Logo"
-      width={50} // Adjust width as needed
-      height={20} // Adjust height as needed
-      priority // Ensures it loads faster
-    />
-  </div>
-</Link>
+          {/* Mobile Logo (Next.js Image) */}
+          <div className="block md:hidden">
+            <Image
+              src="/logo2.png" // Update with the actual path to your logo
+              alt="Softwarerium Logo"
+              width={50} // Adjust width as needed
+              height={20} // Adjust height as needed
+              priority // Ensures it loads faster
+            />
+          </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 items-center">
@@ -92,73 +100,78 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center space-x-4">
           {/* Book A Call Button on Mobile */}
           <Link href="/contact">
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="bg-blue-400 text-white text-sm px-4 py-2 rounded-md flex items-center space-x-2 transition"
+              className="bg-blue-400 text-white font-semibold text-sm px-4 py-2 rounded-md flex items-center space-x-2 transition"
             >
               <span>Get Started</span>
             </motion.button>
           </Link>
           {/* Mobile Menu Button */}
           <button onClick={toggleMenu} className="text-gray-700">
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isOpen ? <LiaTimesSolid size={24} /> : <CgMenuLeft size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      {isOpen && (
-        <motion.nav
-          initial={{ height: 0 }}
-          animate={{ height: 'auto' }}
-          className="md:hidden bg-blue-500 border-t border-gray-200"
-        >
-          <ul className="flex flex-col items-center py-4 space-y-4">
-            {navLinks.map((link) => (
-              <li key={link.name} className="w-full text-center">
-                <div className="flex items-center justify-center">
-                  <Link
-                    href={link.href}
-                    onClick={toggleMenu}
-                    className="block text-white hover:text-indigo-500 transition py-2"
+      {/* Mobile Nav - Slides in from the right, full screen */}
+      <motion.nav
+        initial="closed"
+        animate={isOpen ? 'open' : 'closed'}
+        variants={menuVariants}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        className={`md:hidden fixed top-[72px] right-0 w-full h-[calc(100vh-72px)] bg-blue-500 z-40 shadow-lg overflow-y-auto ${isOpen ? 'block' : 'hidden'}`}
+      >
+        <ul className="flex flex-col items-start py-6 px-6 space-y-4">
+          {navLinks.map((link) => (
+            <li key={link.name} className="w-full border-b border-blue-400 pb-2">
+              <div className="flex items-center justify-between">
+                <Link
+                  href={link.href}
+                  onClick={toggleMenu}
+                  className="block text-white hover:text-indigo-200 transition py-2 text-lg"
+                >
+                  {link.name}
+                </Link>
+                {/* Plus/Minus Icon for Mobile Services */}
+                {link.name === 'Services' && (
+                  <button
+                    onClick={toggleMobileServices}
+                    className="text-white hover:text-indigo-200 transition"
                   >
-                    {link.name}
-                  </Link>
-                  {/* Plus Icon for Mobile Services */}
-                  {link.name === 'Services' && (
-                    <button
-                      onClick={toggleMobileServices}
-                      className="ml-2 text-white hover:text-indigo-500 transition"
-                    >
-                      {isMobileServicesOpen ? <FaMinus size={16} /> : <FaPlus size={16} />}
-                    </button>
-                  )}
-                </div>
-                {/* Services Submenu for Mobile */}
-                {link.name === 'Services' && isMobileServicesOpen && (
-                  <ul className="space-y-2">
-                    {serviceLinks.map((service) => (
-                      <li key={service.name}>
-                        <Link
-                          href={service.href}
-                          onClick={toggleMenu}
-                          className="block text-gray-200 hover:text-white transition py-1"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                    {isMobileServicesOpen ? <FaChevronUp size={16} /> : <FaChevronDown size={16} />}
+                  </button>
                 )}
-              </li>
-            ))}
-          </ul>
-        </motion.nav>
-      )}
+              </div>
+              {/* Services Submenu for Mobile */}
+              {link.name === 'Services' && isMobileServicesOpen && (
+                <motion.ul
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="pl-4 space-y-2 mt-2"
+                >
+                  {serviceLinks.map((service) => (
+                    <li key={service.name} className="border-b border-blue-400 pb-2">
+                      <Link
+                        href={service.href}
+                        onClick={toggleMenu}
+                        className="block text-gray-200 hover:text-white transition py-1 text-base"
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </motion.ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </motion.nav>
     </header>
   );
 };

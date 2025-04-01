@@ -105,8 +105,18 @@ export default function MobileAppDevelopment() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Breadcrumbs */}
-      <nav className="py-4 bg-white" aria-label="Breadcrumb">
+
+      {/* Hero Section */}
+      <Hero
+        title="Mobile App Development by Softwarerium"
+        description="Transform your ideas into engaging, high-performance mobile apps for iOS and Android, designed to captivate users and grow your business."
+        ctaText="Get Started Now"
+        ctaLink="/contact"
+        bgImage="https://images.unsplash.com/photo-1512941937669-5d9c8e419e42?q=80&w=1450&auto=format&fit=crop"
+      />
+
+            {/* Breadcrumbs */}
+            <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">
           <ol className="flex space-x-2 text-sm sm:text-base" style={{ color: colors.gray }}>
             <li>
@@ -128,14 +138,6 @@ export default function MobileAppDevelopment() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <Hero
-        title="Mobile App Development by Softwarerium"
-        description="Transform your ideas into engaging, high-performance mobile apps for iOS and Android, designed to captivate users and grow your business."
-        ctaText="Get Started Now"
-        ctaLink="/contact"
-        bgImage="https://images.unsplash.com/photo-1512941937669-5d9c8e419e42?q=80&w=1450&auto=format&fit=crop"
-      />
 
       {/* Overview Section */}
       <section className="py-12 sm:py-20" style={{ background: colors.lightGray }}>
