@@ -10,7 +10,7 @@ const ScrollToTop = () => {
   const { isOpen } = useMenuState();
 
   useEffect(() => {
-    const onScroll = () => setIsVisible(window.scrollY > 100);
+    const onScroll = () => setIsVisible(window.scrollY > 300);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
