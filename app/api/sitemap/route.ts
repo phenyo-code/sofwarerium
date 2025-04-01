@@ -10,7 +10,7 @@ interface SitemapEntry {
 }
 
 export async function GET() {
-  // Base URL from environment variable or fallback to production URL
+  // Base URL from environment variable or fallback
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://softwarerium.vercel.app';
 
   // List of pages for the sitemap
@@ -31,20 +31,14 @@ export async function GET() {
     { url: '/blog/mobile-friendly-website-2025', lastmod: '2025-03-25', changefreq: 'monthly', priority: '0.6' },
     { url: '/projects/flare', lastmod: '2025-04-02', changefreq: 'monthly', priority: '0.5' },
     { url: '/projects/design-craft', lastmod: '2025-04-02', changefreq: 'monthly', priority: '0.5' },
-    { url: '/projects/morph', lastmod: '2025-04-02', changefreq: 'monthly', priority: '0.5' },
+    { url: '/projects/morph', lastmod: '2025-04-02', changefreq: 'monthly', priority: '0.6' },
     { url: '/projects/reactlab', lastmod: '2025-04-02', changefreq: 'monthly', priority: '0.5' },
     { url: '/projects/roomify', lastmod: '2025-04-02', changefreq: 'monthly', priority: '0.5' },
     { url: '/projects/light-docs', lastmod: '2025-04-02', changefreq: 'monthly', priority: '0.5' },
   ];
 
-  try {
-    // Validate pages array
-    if (!pages.length) {
-      throw new Error('No pages defined for sitemap');
-    }
-
-    // Generate XML with proper escaping
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+  // Generate XML
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${pages
     .map(
@@ -59,25 +53,19 @@ export async function GET() {
     .join('')}
 </urlset>`.trim();
 
-    // Return XML response
-    return new NextResponse(xml, {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/xml',
-        'Cache-Control': 'public, max-age=86400, s-maxage=86400', // Cache for 24 hours
-      },
-    });
-  } catch (error) {
-    console.error('Sitemap generation failed:', error);
-    return new NextResponse(
-      '<?xml version="1.0" encoding="UTF-8"?><error>Failed to generate sitemap</error>',
-      {
-        status: 500,
-        headers: { 'Content-Type': 'application/xml' },
-      }
-    );
-  }
+  // Log for debugging
+  console.log('Sitemap accessed at:', new Date().toISOString());
+
+  // Return XML response with explicit encoding
+  return new NextResponse(xml, {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+      'Access-Control-Allow-Origin': '*', // Allow crawlers from any origin
+    },
+  });
 }
 
-// Ensure the route is not cached dynamically by Next.js
+// Ensure static generation
 export const dynamic = 'force-static';
