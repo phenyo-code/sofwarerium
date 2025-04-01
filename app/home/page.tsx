@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import Hero from './components/Hero';
-import CTA from './components/CTA';
-import Testimonial from './components/Testimonial';
+import Hero from '../components/Hero';
+import CTA from '../components/CTA';
+import Testimonial from '../components/Testimonial';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaCheckCircle, FaSearch } from 'react-icons/fa';
@@ -9,7 +9,7 @@ import { IoIosDesktop } from 'react-icons/io';
 import { CiMobile3 } from 'react-icons/ci';
 import { RiCodeSSlashLine } from 'react-icons/ri';
 import { JSX } from 'react';
-import ScrollToTop from './components/ScrollToTop';
+
 
 // Define interfaces for data
 interface TestimonialItem {

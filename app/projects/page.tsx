@@ -41,10 +41,10 @@ const featuredProjects: FeaturedProject[] = [
     image: '/Roomify.png',
   },
   {
-    title: 'Social Network for Connectify',
-    description: 'A social media platform with real-time chat and interactive feeds.',
-    link: '/projects/connectify',
-    image: '/images/connectify.jpg',
+    title: 'Productivity App for LightDocs',
+    description: 'A productivity app with document management and collaboration features.',
+    link: '/projects/light-docs',
+    image: '/LightDocs.jpg',
   },
 ];
 
