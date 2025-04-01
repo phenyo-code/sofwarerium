@@ -191,7 +191,7 @@ export default function Contact() {
                   required
                   className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 shadow-sm"
                   style={{ borderColor: colors.gray }}
-                  placeholder="John Doe"
+                  placeholder="Full Name"
                 />
               </div>
               <div>
@@ -205,7 +205,7 @@ export default function Contact() {
                   required
                   className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 shadow-sm"
                   style={{ borderColor: colors.gray }}
-                  placeholder="john.doe@example.com"
+                  placeholder="your@email.com"
                 />
               </div>
             </div>
