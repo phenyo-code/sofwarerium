@@ -1,5 +1,7 @@
-
+# public/robots.txt
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /search/
+Disallow: /*?*
 Sitemap: https://softwarerium.vercel.app/api/sitemap
-
