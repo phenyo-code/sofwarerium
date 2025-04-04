@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import Hero from './components/Hero';
-import CTA from './components/CTA';
-import Testimonial from './components/Testimonial';
+import Hero from '../components/Hero';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaCheckCircle, FaSearch } from 'react-icons/fa';
@@ -9,11 +7,10 @@ import { IoIosDesktop } from 'react-icons/io';
 import { CiMobile3 } from 'react-icons/ci';
 import { RiCodeSSlashLine } from 'react-icons/ri';
 import { JSX } from 'react';
-import ScrollToTop from './components/ScrollToTop';
-import ChatBot from './components/ChatBot';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Stats from './components/Stats';
+import ChatBot from '../components/ChatBot';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Stats from '../components/Stats';
 
 // Define interfaces for data
 interface TestimonialItem {
@@ -230,10 +227,10 @@ export default function Home() {
 
       <section aria-label="Softwarerium Home">
         <Hero
-          title="Softwarerium"
-          description="Premier web development, mobile app, and desktop application services to drive your business forward in 2025 with innovative, scalable solutions."
-          ctaText="Explore Our Services"
-          ctaLink="/services"
+          title="Softwarerium Solutions"
+          description="Custom web development, mobile app, and desktop application services to drive your business forward in 2025 with innovative, scalable solutions."
+          ctaText="Explore Our Projects"
+          ctaLink="/projects"
           bgImage="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
       </section>
@@ -245,7 +242,7 @@ export default function Home() {
       <section className="py-12 sm:py-20" style={{ background: colors.lightGray }}>
         <div className="container mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8" style={{ color: colors.black }}>
-            Services
+            Our Software Development Services
           </h1>
           <p className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12" style={{ color: colors.gray }}>
             Explore Softwarerium’s expert services in custom web development, mobile apps, and desktop applications for 2025.
@@ -470,9 +467,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Testimonial testimonials={testimonials} />
-      <CTA text="Launch Your Software Project with Softwarerium" link="/contact" />
       <ChatBot />
       <Footer />
     </div>
