@@ -3,6 +3,7 @@ import CTA from '../../components/CTA';
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 const colors = {
   primary: '#6393FF',
   black: '#1A1A1A',
@@ -37,6 +38,7 @@ export default function DesignCraftProject() {
 
   return (
     <div className="font-sans">
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Hero
         title="Portfolio Site for DesignCraft"
@@ -69,6 +71,7 @@ export default function DesignCraftProject() {
         </div>
       </section>
       <CTA text="Need a Portfolio Site? Let’s Talk!" link="/contact" />
+
     </div>
   );
 }

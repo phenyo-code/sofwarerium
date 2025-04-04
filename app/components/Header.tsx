@@ -1,13 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+ 
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPlus, FaMinus, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { LiaTimesSolid } from 'react-icons/lia';
 import { CgMenuLeft } from 'react-icons/cg';
-import { useMenuState } from './HeaderContext'; // Adjust path
 
 // Base navigation links
 const navLinks = [
@@ -26,12 +25,12 @@ const serviceLinks = [
   { name: 'UI/UX Design', href: '/services/ui-ux-design' },
 ];
 
-// Custom hook to expose menu state
 const Header = () => {
-  const { isOpen, toggleMenu } = useMenuState();
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // Local state for mobile menu
+  const [isServicesOpen, setIsServicesOpen] = useState(false); // Desktop services dropdown
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false); // Mobile services submenu
 
+  const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setIsServicesOpen(!isServicesOpen);
   const toggleMobileServices = () => setIsMobileServicesOpen(!isMobileServicesOpen);
 
@@ -54,9 +53,9 @@ const Header = () => {
             <Image
               src="/logo2.png" // Update with the actual path to your logo
               alt="Softwarerium Logo"
-              width={50} // Adjust width as needed
-              height={20} // Adjust height as needed
-              priority // Ensures it loads faster
+              width={50}
+              height={20}
+              priority
             />
           </div>
         </Link>
@@ -69,17 +68,24 @@ const Header = () => {
                 <Link href={link.href} className="text-gray-700 hover:text-indigo-500 transition flex items-center">
                   {link.name}
                   {link.name === 'Services' && (
-                    <FaChevronDown className="ml-2 text-sm transition-transform duration-200 group-hover:rotate-180" />
+                    <FaChevronDown
+                      className={`ml-2 text-sm transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleServices();
+                      }}
+                    />
                   )}
                 </Link>
                 {/* Services Dropdown for Desktop */}
-                {link.name === 'Services' && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
+                {link.name === 'Services' && isServicesOpen && (
+                  <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg transition-opacity duration-200">
                     {serviceLinks.map((service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
                           className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-indigo-500 transition"
+                          onClick={() => setIsServicesOpen(false)} // Close dropdown on click
                         >
                           {service.name}
                         </Link>
@@ -137,7 +143,7 @@ const Header = () => {
                 >
                   {link.name}
                 </Link>
-                {/* Plus/Minus Icon for Mobile Services */}
+                {/* Chevron Icon for Mobile Services */}
                 {link.name === 'Services' && (
                   <button
                     onClick={toggleMobileServices}

@@ -6,6 +6,7 @@ import { CiMobile3 } from "react-icons/ci";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaRocket, FaShieldAlt, FaUsers } from "react-icons/fa";
 
+
 // Color Palette
 const colors = {
   primary: '#6393FF',    // Vibrant Blue

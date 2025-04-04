@@ -2,6 +2,8 @@ import Hero from '../components/Hero';
 import CTA from '../components/CTA';
 import Link from 'next/link';
 import { FaRocket, FaUsers, FaLightbulb } from 'react-icons/fa'; // Added icons for values section
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 // Color Palette (consistent with your other pages)
 const colors = {
@@ -87,6 +89,7 @@ export default function About() {
 
   return (
     <div className="font-sans">
+      <Header />
       {/* JSON-LD Script */}
       <script
         type="application/ld+json"
@@ -220,6 +223,7 @@ export default function About() {
 
       {/* CTA Section */}
       <CTA text="Ready to Collaborate? Let’s Build Something Amazing!" link="/contact" />
+      <Footer />
     </div>
   );
 }

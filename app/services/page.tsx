@@ -7,6 +7,9 @@ import { SiMaterialdesignicons } from "react-icons/si";
 import Hero from '../components/Hero';
 import CTA from '../components/CTA';
 import Link from 'next/link';
+import ChatBot from '../components/ChatBot';
+
+
 
 // Color Palette
 const colors = {
@@ -105,6 +108,7 @@ export default function Services() {
 
   return (
     <div className="font-sans">
+
       {/* JSON-LD Script */}
       <script
         type="application/ld+json"
@@ -112,7 +116,6 @@ export default function Services() {
       />
 
       
-
       {/* Hero Section */}
       <Hero
         title="Services at Softwarerium"
@@ -196,6 +199,8 @@ export default function Services() {
 
       {/* CTA Section */}
       <CTA text="Let’s Build Your Future" link="/contact" />
+       <ChatBot />
+
     </div>
   );
 }

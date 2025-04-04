@@ -1,102 +1,152 @@
-// app/services/desktop-applications/page.tsx
+"use client";
+
 import Hero from '../../components/Hero';
 import CTA from '../../components/CTA';
 import Link from 'next/link';
-import { IoIosDesktop, IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { FaCogs, FaShieldAlt, FaRocket } from "react-icons/fa";
+import { IoIosDesktop, IoMdCheckmarkCircleOutline } from 'react-icons/io';
+import { FaCogs, FaShieldAlt, FaRocket } from 'react-icons/fa';
+import dynamic from 'next/dynamic';
+
+const NextSeo = dynamic(() => import('next-seo').then((mod) => mod.NextSeo), {
+  ssr: false, // Disables server-side rendering
+});
+
 
 // Color Palette
 const colors = {
-  primary: '#6393FF',    // Vibrant Blue
-  black: '#1A1A1A',      // Deep Black
-  gray: '#4A4A4A',       // Medium Gray
-  lightGray: '#E5E7EB',  // Light Gray
-  white: '#FFFFFF',      // Pure White
+  primary: '#6393FF', // Vibrant Blue
+  black: '#1A1A1A', // Deep Black
+  gray: '#4A4A4A', // Medium Gray
+  lightGray: '#E5E7EB', // Light Gray
+  white: '#FFFFFF', // Pure White
 };
 
-// Metadata for this page
-export const metadata = {
+// SEO Configuration with NextSeo
+const SEO = {
   title: 'Desktop Applications | Softwarerium',
-  description: 'Powerful custom desktop applications designed to streamline your business operations and boost productivity. Build software solutions that fit your unique needs.',
-  keywords: 'desktop applications, business software, custom desktop software, productivity software, enterprise solutions',
+  description:
+    'Powerful custom desktop applications designed to streamline your business operations and boost productivity. Build software solutions that fit your unique needs.',
+  canonical: 'https://softwarerium.vercel.app/services/desktop-applications', // Updated domain
   openGraph: {
     title: 'Desktop Applications | Softwarerium',
-    description: 'Tailored desktop applications that integrate with your workflows, enhancing business operations and increasing efficiency.',
-    url: 'https://www.softwarerium.com/services/desktop-applications',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    description:
+      'Tailored desktop applications that integrate with your workflows, enhancing business operations and increasing efficiency.',
+    url: 'https://softwarerium.vercel.app/services/desktop-applications',
+    type: 'website',
+    images: [
+      {
+        url: 'https://softwarerium.vercel.app/images/desktop-app-hero.jpg', // Replace with actual image URL
+        width: 1200,
+        height: 630,
+        alt: 'Desktop Applications Preview',
+      },
+    ],
   },
   twitter: {
+    cardType: 'summary_large_image',
     title: 'Desktop Applications | Softwarerium',
     description: 'Custom desktop applications to streamline your business operations and boost productivity.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
-    card: 'summary_large_image',
+    image: 'https://softwarerium.vercel.app/images/desktop-app-hero.jpg', // Replace with actual image URL
   },
+  additionalMetaTags: [
+    {
+      name: 'keywords',
+      content:
+        'desktop applications, business software, custom desktop software, productivity software, enterprise solutions',
+    },
+  ],
 };
 
 export default function DesktopApplications() {
   // JSON-LD Structured Data for Organization, Breadcrumbs, and Service
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       {
-        "@type": "Organization",
-        "name": "Softwarerium",
-        "url": "https://www.softwarerium.com",
-        "logo": "https://www.softwarerium.com/logo.png",
-        "description": "Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.",
-        "sameAs": [
-          "https://twitter.com/softwarerium",
-          "https://linkedin.com/company/softwarerium"
+        '@type': 'Organization',
+        name: 'Softwarerium',
+        url: 'https://softwarerium.vercel.app', // Updated domain
+        logo: 'https://softwarerium.vercel.app/logo.png', // Replace with your logo URL
+        description:
+          'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
+        sameAs: [
+          'https://twitter.com/softwarerium',
+          'https://linkedin.com/company/softwarerium',
         ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-555-123-4567",
-          "contactType": "Customer Service",
-          "email": "info@softwarerium.com"
-        }
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+1-555-123-4567', // Replace with your phone number
+          contactType: 'Customer Service',
+          email: 'info@softwarerium.com', // Replace with your email
+        },
       },
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.softwarerium.com"},
-          {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.softwarerium.com/services"},
-          {"@type": "ListItem", "position": 3, "name": "Desktop Applications", "item": "https://www.softwarerium.com/services/desktop-applications"}
-        ]
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Desktop Application Development",
-        "provider": {"@type": "Organization", "name": "Softwarerium"},
-        "description": "Powerful custom desktop applications designed to streamline your business operations and boost productivity.",
-        "areaServed": "Worldwide",
-        "image": "https://www.softwarerium.com/images/desktop-app-hero.jpg",
-        "offers": [
+        '@type': 'BreadcrumbList',
+        itemListElement: [
           {
-            "@type": "Offer",
-            "name": "Custom Desktop Applications",
-            "description": "Tailored software solutions that integrate with your workflows, enhancing business operations and increasing efficiency.",
-            "url": "https://www.softwarerium.com/services/desktop-applications"
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://softwarerium.vercel.app',
           },
           {
-            "@type": "Offer",
-            "name": "Enterprise Desktop Solutions",
-            "description": "Scalable software for large organizations to optimize complex operations.",
-            "url": "https://www.softwarerium.com/services/desktop-applications"
-          }
-        ]
-      }
-    ]
-  }
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Services',
+            item: 'https://softwarerium.vercel.app/services',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Desktop Applications',
+            item: 'https://softwarerium.vercel.app/services/desktop-applications',
+          },
+        ],
+      },
+      {
+        '@type': 'Service',
+        serviceType: 'Desktop Application Development',
+        provider: { '@type': 'Organization', name: 'Softwarerium' },
+        description:
+          'Powerful custom desktop applications designed to streamline your business operations and boost productivity.',
+        areaServed: 'Worldwide',
+        image: 'https://softwarerium.vercel.app/images/desktop-app-hero.jpg', // Replace with actual image URL
+        offers: [
+          {
+            '@type': 'Offer',
+            name: 'Custom Desktop Applications',
+            description:
+              'Tailored software solutions that integrate with your workflows, enhancing business operations and increasing efficiency.',
+            url: 'https://softwarerium.vercel.app/services/desktop-applications',
+          },
+          {
+            '@type': 'Offer',
+            name: 'Enterprise Desktop Solutions',
+            description: 'Scalable software for large organizations to optimize complex operations.',
+            url: 'https://softwarerium.vercel.app/services/desktop-applications',
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <div className="font-sans">
+      {/* NextSeo for SEO management */}
+      <NextSeo
+        title={SEO.title}
+        description={SEO.description}
+        canonical={SEO.canonical}
+        openGraph={SEO.openGraph}
+        twitter={SEO.twitter}
+        additionalMetaTags={SEO.additionalMetaTags}
+      />
+
       {/* JSON-LD Script */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      
 
       {/* Hero Section */}
       <Hero
@@ -107,9 +157,8 @@ export default function DesktopApplications() {
         bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1450&auto=format&fit=crop"
       />
 
-
-{/* Breadcrumbs */}
-<nav className="py-4 bg-white" aria-label="Breadcrumb">
+      {/* Breadcrumbs */}
+      <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">
           <ol className="flex space-x-2 text-sm sm:text-base" style={{ color: colors.gray }}>
             <li>
@@ -168,10 +217,26 @@ export default function DesktopApplications() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
-              { icon: <FaCogs size={32} />, title: 'Tailored Functionality', desc: 'Software built to match your specific workflows and business processes.' },
-              { icon: <FaShieldAlt size={32} />, title: 'Enhanced Security', desc: 'Robust security features to protect your data and operations.' },
-              { icon: <FaRocket size={32} />, title: 'High Performance', desc: 'Optimized for speed and reliability, even with complex tasks.' },
-              { icon: <IoMdCheckmarkCircleOutline size={32} />, title: 'Seamless Integration', desc: 'Connects effortlessly with your existing systems and tools.' },
+              {
+                icon: <FaCogs size={32} />,
+                title: 'Tailored Functionality',
+                desc: 'Software built to match your specific workflows and business processes.',
+              },
+              {
+                icon: <FaShieldAlt size={32} />,
+                title: 'Enhanced Security',
+                desc: 'Robust security features to protect your data and operations.',
+              },
+              {
+                icon: <FaRocket size={32} />,
+                title: 'High Performance',
+                desc: 'Optimized for speed and reliability, even with complex tasks.',
+              },
+              {
+                icon: <IoMdCheckmarkCircleOutline size={32} />,
+                title: 'Seamless Integration',
+                desc: 'Connects effortlessly with your existing systems and tools.',
+              },
             ].map((benefit, index) => (
               <div
                 key={index}
@@ -218,11 +283,21 @@ export default function DesktopApplications() {
                 Softwarerium takes a collaborative and structured approach to desktop application development, ensuring every project aligns with your vision and delivers measurable results.
               </p>
               <ol className="list-decimal pl-6 space-y-4 text-base sm:text-lg" style={{ color: colors.gray }}>
-                <li><strong>Discovery:</strong> We analyze your needs, goals, and existing systems to define the project scope.</li>
-                <li><strong>Design:</strong> Our team creates prototypes and designs that prioritize usability and efficiency.</li>
-                <li><strong>Development:</strong> Using agile methodologies, we build your application with clean, scalable code.</li>
-                <li><strong>Testing:</strong> Rigorous testing ensures reliability, security, and performance across platforms.</li>
-                <li><strong>Deployment & Support:</strong> We launch your software and provide ongoing maintenance to keep it running smoothly.</li>
+                <li>
+                  <strong>Discovery:</strong> We analyze your needs, goals, and existing systems to define the project scope.
+                </li>
+                <li>
+                  <strong>Design:</strong> Our team creates prototypes and designs that prioritize usability and efficiency.
+                </li>
+                <li>
+                  <strong>Development:</strong> Using agile methodologies, we build your application with clean, scalable code.
+                </li>
+                <li>
+                  <strong>Testing:</strong> Rigorous testing ensures reliability, security, and performance across platforms.
+                </li>
+                <li>
+                  <strong>Deployment & Support:</strong> We launch your software and provide ongoing maintenance to keep it running smoothly.
+                </li>
               </ol>
             </div>
 

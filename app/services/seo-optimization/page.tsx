@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaSearch, FaRocket, FaChartLine, FaShieldAlt } from "react-icons/fa";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
+
 // Color Palette
 const colors = {
   primary: '#6393FF',    // Vibrant Blue

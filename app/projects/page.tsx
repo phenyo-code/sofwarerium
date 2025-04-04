@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 // Define interfaces for data
 interface FeaturedProject {
   title: string;
@@ -136,6 +137,7 @@ export default function Projects() {
 
   return (
     <div className="font-sans">
+
       {/* JSON-LD Script */}
       <script
         type="application/ld+json"
@@ -199,6 +201,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

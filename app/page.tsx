@@ -10,6 +10,9 @@ import { CiMobile3 } from 'react-icons/ci';
 import { RiCodeSSlashLine } from 'react-icons/ri';
 import { JSX } from 'react';
 import ScrollToTop from './components/ScrollToTop';
+import ChatBot from './components/ChatBot'; // Import the ChatBot
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Define interfaces for data
 interface TestimonialItem {
@@ -48,11 +51,11 @@ interface BlogPost {
 
 // Color Palette
 const colors = {
-  primary: '#6393FF',    // Vibrant Blue
-  black: '#1A1A1A',      // Deep Black
-  gray: '#4A4A4A',       // Medium Gray
-  lightGray: '#E5E7EB',  // Light Gray
-  white: '#FFFFFF',      // Pure White
+  primary: '#6393FF',
+  black: '#1A1A1A',
+  gray: '#4A4A4A',
+  lightGray: '#E5E7EB',
+  white: '#FFFFFF',
 };
 
 // Data (unchanged from your original, abbreviated for brevity)
@@ -123,7 +126,7 @@ export const metadata = {
     siteName: 'Softwarerium',
     images: [
       {
-        url: 'URL_TO_IMAGE', // Replace with actual image URL
+        url: 'URL_TO_IMAGE',
         width: 1200,
         height: 630,
         alt: 'Softwarerium Software Solutions',
@@ -134,15 +137,14 @@ export const metadata = {
   twitter: {
     title: 'Custom Software Solutions for Modern Businesses |Softwarerium ',
     description: 'Discover how Softwarerium drives business success with innovative software solutions in 2025.',
-    image: 'URL_TO_IMAGE', // Replace with actual image URL
+    image: 'URL_TO_IMAGE',
     card: 'summary_large_image',
-    creator: '@softwarerium', // Replace with your Twitter handle
+    creator: '@softwarerium',
   },
   robots: 'index, follow',
 };
 
 export default function Home() {
-  // Enhanced JSON-LD Structured Data for SEO
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -150,18 +152,15 @@ export default function Home() {
         '@type': 'Organization',
         name: 'Softwarerium',
         url: 'https://softwarerium.vercel.app',
-        logo: 'URL_TO_LOGO', // Replace with your logo URL
+        logo: 'URL_TO_LOGO',
         description: 'Softwarerium specializes in custom web development, mobile apps, and desktop applications, delivering innovative software solutions for businesses in 2025.',
-        sameAs: [
-          'https://twitter.com/softwarerium', // Replace with your social media URLs
-          'https://linkedin.com/company/softwarerium',
-        ],
+        sameAs: ['https://twitter.com/softwarerium', 'https://linkedin.com/company/softwarerium'],
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+1-555-123-4567', // Replace with your phone number
+          telephone: '+1-555-123-4567',
           contactType: 'Customer Service',
-          email: 'info@softwarerium.com', // Replace with your email
-          areaServed: 'United States',
+          email: 'info@softwarerium.com',
+          areaServed: 'South Africa',
           availableLanguage: 'English',
         },
       },
@@ -181,25 +180,17 @@ export default function Home() {
         url: 'https://softwarerium.vercel.app',
         name: 'Softwarerium',
         description: 'Softwarerium offers expert software solutions including custom web development, mobile apps, and desktop applications for businesses.',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://softwarerium.vercel.app/search?q={search_term_string}',
-          'query-input': 'required name=search_term_string',
-        },
         inLanguage: 'en-US',
       },
     ],
   };
 
   return (
-    <div className="font-sans">
-      {/* JSON-LD Script */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
 
-      {/* Hero Section */}
+    <div className="font-sans">
+      <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <section aria-label="Softwarerium Home">
         <Hero
           title="Softwarerium"
@@ -210,19 +201,12 @@ export default function Home() {
         />
       </section>
 
-      {/* Services Section */}
       <section className="py-12 sm:py-20" style={{ background: colors.lightGray }}>
         <div className="container mx-auto px-4 sm:px-6">
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8"
-            style={{ color: colors.black }}
-          >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8" style={{ color: colors.black }}>
             Services
           </h1>
-          <p
-            className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12"
-            style={{ color: colors.gray }}
-          >
+          <p className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12" style={{ color: colors.gray }}>
             Discover Softwarerium’s cutting-edge software solutions crafted to elevate your business in 2025.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
@@ -264,19 +248,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
       <section className="py-12 sm:py-20" style={{ background: colors.black }}>
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8"
-            style={{ color: colors.white }}
-          >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8" style={{ color: colors.white }}>
             Why Choose Softwarerium for Software Solutions?
           </h2>
-          <p
-            className="text-base sm:text-lg max-w-3xl mx-auto mb-8 sm:mb-12"
-            style={{ color: colors.lightGray }}
-          >
+          <p className="text-base sm:text-lg max-w-3xl mx-auto mb-8 sm:mb-12" style={{ color: colors.lightGray }}>
             Softwarerium fuses innovation and precision to deliver custom software that exceeds expectations.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
@@ -288,20 +265,16 @@ export default function Home() {
               { title: 'Continuous Support', desc: 'Ongoing care to keep your software ahead.' },
               { title: 'Your Vision, Our Expertise', desc: 'Softwarerium collaborates to bring your ideas to life.' },
             ].map((item, index) => (
-              <div
-                key={index}
-                className="p-4 sm:p-6 transition-all duration-300"
-              >
+              <div key={index} className="p-4 sm:p-6 transition-all duration-300">
                 <FaCheckCircle
                   className="mx-auto mb-3 sm:mb-4 transition-transform duration-300 hover:scale-110"
                   size={32}
                   style={{ color: colors.primary }}
                   aria-hidden="true"
                 />
-                <h3
-                  className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3"
-                  style={{ color: colors.white }}
-                >
+_visual
+
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3" style={{ color: colors.white }}>
                   {item.title}
                 </h3>
                 <p className="text-sm sm:text-base" style={{ color: colors.lightGray }}>
@@ -313,27 +286,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
       <section className="py-12 sm:py-20" style={{ background: colors.white }}>
         <div className="container mx-auto px-4 sm:px-6">
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8"
-            style={{ color: colors.black }}
-          >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8" style={{ color: colors.black }}>
             Softwarerium’s Featured Software Projects
           </h2>
-          <p
-            className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12"
-            style={{ color: colors.gray }}
-          >
+          <p className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12" style={{ color: colors.gray }}>
             See how Softwarerium’s expertise in software development drives success for our clients.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {featuredProjects.map((project) => (
-              <article
-                key={project.title}
-                className="rounded-lg border transition-all duration-300 overflow-hidden"
-              >
+              <article key={project.title} className="rounded-lg border transition-all duration-300 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={`${project.title} - Softwarerium Project`}
@@ -349,10 +312,7 @@ export default function Home() {
                   >
                     {project.title}
                   </h3>
-                  <p
-                    className="text-sm sm:text-base mb-4"
-                    style={{ color: colors.gray }}
-                  >
+                  <p className="text-sm sm:text-base mb-4" style={{ color: colors.gray }}>
                     {project.description}
                   </p>
                   <Link
@@ -379,19 +339,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Blog Posts Section */}
       <section className="py-12 sm:py-20" style={{ background: colors.lightGray }}>
         <div className="container mx-auto px-4 sm:px-6">
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8"
-            style={{ color: colors.black }}
-          >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8" style={{ color: colors.black }}>
             Latest Blog Posts
           </h2>
-          <p
-            className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12"
-            style={{ color: colors.gray }}
-          >
+          <p className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12" style={{ color: colors.gray }}>
             Stay updated with Softwarerium’s insights on software development trends and solutions.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
@@ -415,16 +368,10 @@ export default function Home() {
                   >
                     {post.title}
                   </h3>
-                  <p
-                    className="text-sm sm:text-base mb-2 italic"
-                    style={{ color: colors.gray }}
-                  >
+                  <p className="text-sm sm:text-base mb-2 italic" style={{ color: colors.gray }}>
                     {post.date} | {post.service}
                   </p>
-                  <p
-                    className="text-sm sm:text-base mb-4"
-                    style={{ color: colors.gray }}
-                  >
+                  <p className="text-sm sm:text-base mb-4" style={{ color: colors.gray }}>
                     {post.excerpt}
                   </p>
                   <Link
@@ -441,7 +388,7 @@ export default function Home() {
           <div className="flex justify-center mt-8 sm:mt-12">
             <Link href="/blog">
               <button
-                className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 border border-primary hover:bg-primary hover:text-white"
+                className="px-6 sm:mx-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 border border-primary hover:bg-primary hover:text-white"
                 style={{ color: colors.primary }}
               >
                 More Blogs
@@ -451,19 +398,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Process Section */}
       <section className="py-12 sm:py-20" style={{ background: colors.lightGray }}>
         <div className="container mx-auto px-4 sm:px-6">
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8"
-            style={{ color: colors.black }}
-          >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8" style={{ color: colors.black }}>
             Softwarerium’s Software Development Process
           </h2>
-          <p
-            className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12"
-            style={{ color: colors.gray }}
-          >
+          <p className="text-base sm:text-lg max-w-3xl mx-auto text-center mb-8 sm:mb-12" style={{ color: colors.gray }}>
             Softwarerium’s disciplined approach ensures your software vision becomes a reality.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
@@ -480,10 +420,7 @@ export default function Home() {
                 >
                   {index + 1}
                 </div>
-                <h3
-                  className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3"
-                  style={{ color: colors.black }}
-                >
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3" style={{ color: colors.black }}>
                   {step.title}
                 </h3>
                 <p className="text-sm sm:text-base" style={{ color: colors.gray }}>
@@ -495,10 +432,12 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Testimonials, CTA, and Newsletter Sections */}
       <Testimonial testimonials={testimonials} />
       <CTA text="Start Your Softwarerium Project Today" link="/contact" />
+
+      {/* Add ChatBot here */}
+      <ChatBot />
+      <Footer />
     </div>
   );
 }

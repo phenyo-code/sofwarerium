@@ -5,6 +5,7 @@ import { RiPaintFill } from "react-icons/ri";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaRocket, FaUsers, FaPaintBrush } from "react-icons/fa";
 
+
 // Color Palette
 const colors = {
   primary: '#6393FF',    // Vibrant Blue

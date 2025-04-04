@@ -3,6 +3,7 @@ import CTA from '../../components/CTA';
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 const colors = {
   primary: '#6393FF',
   black: '#1A1A1A',

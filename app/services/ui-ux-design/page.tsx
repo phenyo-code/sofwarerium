@@ -5,6 +5,7 @@ import { SiMaterialdesignicons } from "react-icons/si";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaUsers, FaRocket, FaLightbulb } from "react-icons/fa";
 
+
 // Color Palette
 const colors = {
   primary: '#6393FF',    // Vibrant Blue

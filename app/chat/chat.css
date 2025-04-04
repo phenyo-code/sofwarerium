@@ -1,0 +1,33 @@
+/* app/chat/chat.css */
+html, body {
+    touch-action: manipulation; /* Prevents double-tap zoom */
+    -webkit-text-size-adjust: 100%; /* Prevents text scaling */
+    -webkit-user-select: text; /* Ensures text is selectable */
+    user-select: text; /* Standard property for compatibility */
+    overscroll-behavior: none; /* Prevents overscroll zoom */
+  }
+  
+  input, textarea {
+    font-size: 16px !important; /* Minimum size to prevent zoom */
+    -webkit-appearance: none; /* Removes default iOS styling */
+    appearance: none;
+    -webkit-user-select: text; /* Ensures text is selectable */
+    user-select: text; /* Standard property for compatibility */
+    outline: none; /* Removes default focus outline */
+  }
+  
+  /* Ensure viewport doesn't trigger zoom */
+  @viewport {
+    width: device-width;
+    initial-scale: 1.0;
+    maximum-scale: 1.0;
+    user-scalable: no;
+  }
+  
+  /* Fallback for older browsers */
+  @-ms-viewport {
+    width: device-width;
+    initial-scale: 1.0;
+    maximum-scale: 1.0;
+    user-scalable: no;
+  }

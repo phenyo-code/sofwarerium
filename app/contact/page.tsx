@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaSpinner } from 'react-icons/fa';
 import { sendMail } from '../actions/sendMail'; // Adjust path
 import { useRef, useState, useTransition } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 // Color Palette
 const colors = {
@@ -17,8 +19,8 @@ const colors = {
 
 export default function Contact() {
   const [status, setStatus] = useState<{ success: boolean; message?: string } | null>(null);
-  const formRef = useRef<HTMLFormElement>(null); // Add ref for form
-  const [isPending, startTransition] = useTransition(); // Add useTransition hook
+  const formRef = useRef<HTMLFormElement>(null); // Ref for form reset
+  const [isPending, startTransition] = useTransition(); // Transition for async submission
 
   const handleSubmit = async (formData: FormData) => {
     startTransition(async () => {
@@ -26,80 +28,61 @@ export default function Contact() {
       setStatus(result);
 
       if (result.success) {
-        formRef.current?.reset(); // Reset form using ref
-        setTimeout(() => setStatus(null), 5000);
+        formRef.current?.reset(); // Reset form on success
+        setTimeout(() => setStatus(null), 5000); // Clear status after 5 seconds
       }
     });
   };
 
   // JSON-LD unchanged (omitted for brevity)
-  // JSON-LD unchanged
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'Organization',
-        'name': 'Softwarerium',
-        'url': 'https://sofwarerium.vercel.app',
-        'logo': 'URL_TO_LOGO',
-        'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
-        'sameAs': [
-          'https://twitter.com/softwarerium',
-          'https://linkedin.com/company/softwarerium',
-        ],
-        'contactPoint': [
+        name: 'Softwarerium',
+        url: 'https://sofwarerium.vercel.app',
+        logo: 'URL_TO_LOGO',
+        description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
+        sameAs: ['https://twitter.com/softwarerium', 'https://linkedin.com/company/softwarerium'],
+        contactPoint: [
           {
             '@type': 'ContactPoint',
-            'telephone': '+1-555-123-4567',
-            'contactType': 'Customer Service',
-            'email': 'info@softwarerium.com',
-            'contactOption': 'TollFree',
-            'areaServed': 'Worldwide',
+            telephone: '+1-555-123-4567',
+            contactType: 'Customer Service',
+            email: 'info@softwarerium.com',
+            contactOption: 'TollFree',
+            areaServed: 'Worldwide',
           },
           {
             '@type': 'ContactPoint',
-            'email': 'info@softwarerium.com',
-            'contactType': 'Sales',
-            'areaServed': 'Worldwide',
+            email: 'info@softwarerium.com',
+            contactType: 'Sales',
+            areaServed: 'Worldwide',
           },
         ],
       },
       {
         '@type': 'BreadcrumbList',
-        'itemListElement': [
-          {
-            '@type': 'ListItem',
-            'position': 1,
-            'name': 'Home',
-            'item': 'https://sofwarerium.vercel.app',
-          },
-          {
-            '@type': 'ListItem',
-            'position': 2,
-            'name': 'Contact',
-            'item': 'https://sofwarerium.vercel.app/contact',
-          },
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sofwarerium.vercel.app' },
+          { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://sofwarerium.vercel.app/contact' },
         ],
       },
       {
         '@type': 'ContactPage',
-        'name': 'Contact Softwarerium',
-        'description': 'Get in touch with Softwarerium for expert software solutions. Reach out via phone, email, or our contact form.',
-        'url': 'https://sofwarerium.vercel.app/contact',
-        'publisher': {
-          '@type': 'Organization',
-          'name': 'Softwarerium',
-        },
+        name: 'Contact Softwarerium',
+        description: 'Get in touch with Softwarerium for expert software solutions. Reach out via phone, email, or our contact form.',
+        url: 'https://sofwarerium.vercel.app/contact',
+        publisher: { '@type': 'Organization', name: 'Softwarerium' },
       },
     ],
   };
 
   return (
     <div className="font-sans">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero Section */}
       <Hero
@@ -148,16 +131,10 @@ export default function Contact() {
                 className="p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-center"
                 style={{ background: colors.white }}
               >
-                <div
-                  className="mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full"
-                  style={{ color: colors.primary }}
-                >
+                <div className="mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full" style={{ color: colors.primary }}>
                   {item.icon}
                 </div>
-                <h3
-                  className="text-lg sm:text-xl font-semibold mb-2"
-                  style={{ color: colors.black }}
-                >
+                <h3 className="text-lg sm:text-xl font-semibold mb-2" style={{ color: colors.black }}>
                   {item.title}
                 </h3>
                 <p className="text-sm sm:text-base" style={{ color: colors.gray }}>
@@ -182,7 +159,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
-                  Full Name
+                  Full Name *
                 </label>
                 <input
                   type="text"
@@ -196,7 +173,7 @@ export default function Contact() {
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
-                  Email Address
+                  Email Address *
                 </label>
                 <input
                   type="email"
@@ -209,38 +186,92 @@ export default function Contact() {
                 />
               </div>
             </div>
+
+            {/* Services Dropdown (Replaces Subject) */}
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
-                Subject
+              <label htmlFor="services" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
+                Services Needed *
               </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
+              <select
+                id="services"
+                name="services"
+                multiple
                 required
                 className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 shadow-sm"
                 style={{ borderColor: colors.gray }}
-                placeholder="Project Inquiry"
-              />
+              >
+                <option value="web-development">Web Development</option>
+                <option value="desktop-applications">Desktop Applications</option>
+                <option value="mobile-app-development">Mobile App Development</option>
+                <option value="seo-optimization">SEO Optimization</option>
+                <option value="web-design">Web Design</option>
+                <option value="ui-ux-design">UI/UX Design</option>
+              </select>
+              <p className="text-xs mt-1" style={{ color: colors.gray }}>
+                Hold Ctrl (Windows) or Cmd (Mac) to select multiple options.
+              </p>
             </div>
+
+            {/* Budget Dropdown (ZAR) */}
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
-                Message
+              <label htmlFor="budget" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
+                Project Budget (ZAR) *
+              </label>
+              <select
+                id="budget"
+                name="budget"
+                required
+                className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 shadow-sm"
+                style={{ borderColor: colors.gray }}
+              >
+                <option value="">Select a budget range</option>
+                <option value="under-3500">Under R3,500</option>
+                <option value="3500-10000">R3,500 - R10,000</option>
+                <option value="10000-25000">R10,000 - R25,000</option>
+                <option value="25000-50000">R25,000 - R50,000</option>
+                <option value="50000+">R50,000+</option>
+              </select>
+            </div>
+
+            {/* Continuous Support Dropdown */}
+            <div>
+              <label htmlFor="support" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
+                Continuous Support Needed? *
+              </label>
+              <select
+                id="support"
+                name="support"
+                required
+                className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 shadow-sm"
+                style={{ borderColor: colors.gray }}
+              >
+                <option value="">Select an option</option>
+                <option value="yes">Yes, I need ongoing support</option>
+                <option value="no">No, one-time project only</option>
+                <option value="maybe">Not sure, let’s discuss</option>
+              </select>
+            </div>
+
+            {/* Optional Description (Replaces Message) */}
+            <div>
+              <label htmlFor="description" className="block text-sm font-medium mb-2" style={{ color: colors.black }}>
+                Project Description (Optional)
               </label>
               <textarea
-                id="message"
-                name="message"
-                required
+                id="description"
+                name="description"
                 rows={5}
                 className="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 shadow-sm"
                 style={{ borderColor: colors.gray }}
-                placeholder="Tell us about your project..."
+                placeholder="Tell us more about your project, goals, or specific requirements..."
               />
             </div>
+
+            {/* Submit Button */}
             <div className="text-center mt-4">
               <button
                 type="submit"
-                disabled={isPending} // Disable button while sending
+                disabled={isPending}
                 className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:bg-opacity-90 flex items-center justify-center mx-auto"
                 style={{ background: colors.primary, color: colors.white }}
               >
@@ -255,15 +286,14 @@ export default function Contact() {
               </button>
             </div>
             {status && (
-              <p
-                className={`text-center mt-4 ${status.success ? 'text-green-600' : 'text-red-600'}`}
-              >
+              <p className={`text-center mt-4 ${status.success ? 'text-green-600' : 'text-red-600'}`}>
                 {status.message}
               </p>
             )}
           </form>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
