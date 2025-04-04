@@ -89,7 +89,7 @@ export default function ChatPage() {
           if (input === '1') { setStep(1); simulateTyping('Awesome! Let’s start with your name ?', () => {}); }
           else if (input === '2') { simulateTyping('For support, email support@softwarerium.com or describe your issue here!', () => {}); }
           else if (input === '3') { simulateTyping('Cool! What’s on your mind?', () => {}); }
-          else { simulateTyping('Hmm, please pick 1, 2, or 3 to get started!', () => {}); }
+          else { simulateTyping('Hmm, I couldnt understand that, please reply "1" to get started!', () => {}); }
           break;
         case 1:
           if (!/^[a-zA-Z\s]{2,}$/.test(input)) { simulateTyping('Please enter a valid name (at least 2 letters, no numbers).', () => {}); return; }
@@ -97,7 +97,7 @@ export default function ChatPage() {
           break;
         case 2:
           if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input)) { simulateTyping('Oops! That doesn’t look like a valid email. Try again?', () => {}); return; }
-          setChatData(prev => ({ ...prev, email: input })); setStep(3); simulateTyping(`Thanks, ${chatData.name}! Which services are you looking for? (Reply with 1 or 2 or 3 ) \n1) Web Development\n2) Desktop Apps\n3) Mobile Apps`, () => {});
+          setChatData(prev => ({ ...prev, email: input })); setStep(3); simulateTyping(`Thanks, ${chatData.name}! Which services are you looking for? (e.g "1" ) \n1) Web Development\n2) Desktop Apps\n3) Mobile Apps`, () => {});
           break;
         case 3:
           const serviceOptions = ['Web Development', 'Desktop Apps', 'Mobile Apps'];
