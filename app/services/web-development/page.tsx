@@ -24,13 +24,13 @@ export const metadata = {
   openGraph: {
     title: 'Web Development | Softwarerium',
     description: 'Robust and scalable websites tailored to your business needs, from e-commerce to corporate solutions.',
-    url: 'https://www.softwarerium.com/services/web-development',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/services/web-development',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'Web Development | Softwarerium',
     description: 'Performance-driven web development services to create fast, secure, and scalable websites.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -43,8 +43,8 @@ export default function WebDevelopment() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://www.softwarerium.com',
-        logo: 'URL_TO_LOGO', // Replace with your logo URL
+        url: 'https://softwarerium.co.za',
+        logo: 'https://softwarerium.co.za/logo.png', // Replace with your logo URL
         description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: [
           'https://twitter.com/softwarerium', // Replace with your social media URLs
@@ -64,19 +64,19 @@ export default function WebDevelopment() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.softwarerium.com',
+            item: 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Services',
-            item: 'https://www.softwarerium.com/services',
+            item: 'https://softwarerium.co.za/services',
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Web Development',
-            item: 'https://www.softwarerium.com/services/web-development',
+            item: 'https://softwarerium.co.za/services/web-development',
           },
         ],
       },
@@ -92,7 +92,7 @@ export default function WebDevelopment() {
           '@type': 'Offer',
           name: 'Custom Web Development',
           description: 'Robust and scalable websites tailored to your business needs, from e-commerce to corporate solutions.',
-          url: 'https://www.softwarerium.com/services/web-development',
+          url: 'https://softwarerium.co.za/services/web-development',
         },
       },
     ],

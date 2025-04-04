@@ -23,13 +23,13 @@ export const metadata = {
   openGraph: {
     title: 'UI/UX Design | Softwarerium',
     description: 'User-centered UI/UX designs that blend aesthetics and functionality to elevate your digital experience.',
-    url: 'https://www.softwarerium.com/services/ui-ux-design',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/services/ui-ux-design',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'UI/UX Design | Softwarerium',
     description: 'Intuitive and engaging UI/UX designs crafted to improve usability and delight your users.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -42,8 +42,8 @@ export default function UIUXDesign() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://www.softwarerium.com',
-        'logo': 'URL_TO_LOGO', // Replace with actual logo URL
+        'url': 'https://softwarerium.co.za',
+        'logo': 'https://softwarerium.co.za/logo.png', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
           'https://twitter.com/softwarerium',
@@ -53,7 +53,7 @@ export default function UIUXDesign() {
           '@type': 'ContactPoint',
           'telephone': '+1-555-123-4567', // Replace with actual phone number
           'contactType': 'Customer Service',
-          'email': 'info@softwarerium.com', // Replace with actual email
+          'email': 'info@softwarerium.co.za', // Replace with actual email
         },
       },
       {
@@ -63,19 +63,19 @@ export default function UIUXDesign() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://www.softwarerium.com',
+            'item': 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Services',
-            'item': 'https://www.softwarerium.com/services',
+            'item': 'https://softwarerium.co.za/services',
           },
           {
             '@type': 'ListItem',
             'position': 3,
             'name': 'UI/UX Design',
-            'item': 'https://www.softwarerium.com/services/ui-ux-design',
+            'item': 'https://softwarerium.co.za/services/ui-ux-design',
           },
         ],
       },
@@ -88,19 +88,19 @@ export default function UIUXDesign() {
         },
         'description': 'Intuitive, user-centered UI/UX designs that enhance usability and engagement for your digital products.',
         'areaServed': 'Worldwide',
-        'image': 'URL_TO_IMAGE', // Replace with actual image URL
+        'image': 'https://softwarerium.co.za/opengraph-image.png', // Replace with actual image URL
         'offers': [
           {
             '@type': 'Offer',
             'name': 'UI/UX Design Services',
             'description': 'User-centered UI/UX designs that blend aesthetics and functionality to elevate your digital experience.',
-            'url': 'https://www.softwarerium.com/services/ui-ux-design',
+            'url': 'https://softwarerium.co.za/services/ui-ux-design',
           },
           {
             '@type': 'Offer',
             'name': 'Prototyping & Validation',
             'description': 'Interactive prototypes and user testing to refine the experience.',
-            'url': 'https://www.softwarerium.com/services/ui-ux-design',
+            'url': 'https://softwarerium.co.za/services/ui-ux-design',
           },
         ],
       },

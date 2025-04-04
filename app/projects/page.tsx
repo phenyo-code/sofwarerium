@@ -65,13 +65,13 @@ export const metadata = {
   openGraph: {
     title: 'Projects | Softwarerium',
     description: 'Discover our featured projects that highlight creativity, functionality, and cutting-edge technology.',
-    url: 'https://sofwarerium.vercel.app/projects',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/projects',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'Projects | Softwarerium',
     description: 'Check out Softwarerium’s portfolio of innovative and impactful digital projects.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -84,8 +84,8 @@ export default function Projects() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://sofwarerium.vercel.app',
-        'logo': 'URL_TO_LOGO', // Replace with actual logo URL
+        'url': 'https://softwarerium.co.za',
+        'logo': 'https://softwarerium.co.za/logo.png', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
           'https://twitter.com/softwarerium',
@@ -95,7 +95,7 @@ export default function Projects() {
           '@type': 'ContactPoint',
           'telephone': '+1-555-123-4567', // Replace with actual phone number
           'contactType': 'Customer Service',
-          'email': 'info@softwarerium.com', // Replace with actual email
+          'email': 'info@softwarerium.co.za', // Replace with actual email
         },
       },
       {
@@ -105,13 +105,13 @@ export default function Projects() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://sofwarerium.vercel.app',
+            'item': 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Projects',
-            'item': 'https://sofwarerium.vercel.app/projects',
+            'item': 'https://softwarerium.co.za/projects',
           },
         ],
       },
@@ -119,7 +119,7 @@ export default function Projects() {
         '@type': 'CollectionPage',
         'name': 'Projects by Softwarerium',
         'description': 'Explore Softwarerium’s signature projects showcasing expertise in web design, development, and innovative digital solutions.',
-        'url': 'https://sofwarerium.vercel.app/projects',
+        'url': 'https://softwarerium.co.za/projects',
         'publisher': {
           '@type': 'Organization',
           'name': 'Softwarerium',
@@ -128,8 +128,8 @@ export default function Projects() {
           '@type': 'CreativeWork',
           'name': project.title,
           'description': project.description,
-          'url': `https://sofwarerium.vercel.app${project.link}`,
-          'image': `https://sofwarerium.vercel.app${project.image}`,
+          'url': `https://softwarerium.co.za${project.link}`,
+          'image': `https://softwarerium.co.za${project.image}`,
         })),
       },
     ],

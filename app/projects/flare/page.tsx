@@ -19,8 +19,8 @@ export const metadata = {
   openGraph: {
     title: 'E-Commerce Platform for FLARE | Softwarerium',
     description: 'A responsive e-commerce site with admin dashboard and seamless payment integration by Softwarerium.',
-    url: 'https://softwarerium.vercel.app/projects/flare',
-    image: 'https://softwarerium.vercel.app/Flare.png',
+    url: 'https://softwarerium.co.za/projects/flare',
+    image: 'https://softwarerium.co.za/Flare.png',
   },
 };
 
@@ -30,8 +30,8 @@ export default function FlareProject() {
     '@type': 'CreativeWork',
     name: 'E-Commerce Platform for FLARE',
     description: 'A fully responsive e-commerce site with admin dashboard, payment gateway, and more, built by Softwarerium.',
-    url: 'https://softwarerium.vercel.app/projects/flare',
-    image: 'https://softwarerium.vercel.app/Flare.png',
+    url: 'https://softwarerium.co.za/projects/flare',
+    image: 'https://softwarerium.co.za/Flare.png',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     datePublished: '2025-04-02',
   };
@@ -44,7 +44,7 @@ export default function FlareProject() {
         description="A fully responsive e-commerce solution with advanced features."
         ctaText="Contact Us"
         ctaLink="/contact"
-        bgImage="https://softwarerium.vercel.app/Flare.png"
+        bgImage="https://softwarerium.co.za/Flare.png"
       />
       <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">

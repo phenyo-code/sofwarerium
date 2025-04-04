@@ -19,8 +19,8 @@ export const metadata = {
   openGraph: {
     title: 'Productivity App for LightDocs | Softwarerium',
     description: 'Softwarerium’s productivity app for LightDocs with advanced document and collaboration features.',
-    url: 'https://softwarerium.vercel.app/projects/light-docs',
-    image: 'https://softwarerium.vercel.app/LightDocs.jpg',
+    url: 'https://softwarerium.co.za/projects/light-docs',
+    image: 'https://softwarerium.co.za/LightDocs.jpg',
   },
 };
 
@@ -30,8 +30,8 @@ export default function LightDocsProject() {
     '@type': 'CreativeWork',
     name: 'Productivity App for LightDocs',
     description: 'A productivity app with document management and collaboration features, built by Softwarerium.',
-    url: 'https://softwarerium.vercel.app/projects/light-docs',
-    image: 'https://softwarerium.vercel.app/LightDocs.jpg',
+    url: 'https://softwarerium.co.za/projects/light-docs',
+    image: 'https://softwarerium.co.za/LightDocs.jpg',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     datePublished: '2025-04-02',
   };
@@ -44,7 +44,7 @@ export default function LightDocsProject() {
         description="A powerful tool for document management and teamwork."
         ctaText="Contact Us"
         ctaLink="/contact"
-        bgImage="https://softwarerium.vercel.app/LightDocs.jpg"
+        bgImage="https://softwarerium.co.za/LightDocs.jpg"
       />
       <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">

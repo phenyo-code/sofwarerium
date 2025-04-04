@@ -101,13 +101,13 @@ export const metadata = {
   openGraph: {
     title: 'Blog | Softwarerium',
     description: 'Explore expert articles on software solutions, digital trends, and IT innovations from Softwarerium.',
-    url: 'https://www.softwarerium.com/blog',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'Blog | Softwarerium',
     description: 'Read the latest from Softwarerium on web, mobile, SEO, design, and IT solutions.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -120,8 +120,8 @@ export default function Blog() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://www.softwarerium.com',
-        'logo': 'URL_TO_LOGO', // Replace with your logo URL
+        'url': 'https://softwarerium.co.za',
+        'logo': 'https://softwarerium.co.za/logo.png', // Replace with your logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
           'https://twitter.com/softwarerium',
@@ -141,13 +141,13 @@ export default function Blog() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://www.softwarerium.com',
+            'item': 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Blog',
-            'item': 'https://www.softwarerium.com/blog',
+            'item': 'https://softwarerium.co.za/blog',
           },
         ],
       },
@@ -155,7 +155,7 @@ export default function Blog() {
         '@type': 'CollectionPage',
         'name': 'Softwarerium Blog',
         'description': 'Stay updated with Softwarerium’s insights on web development, mobile apps, desktop applications, SEO, web design, UI/UX design, and IT solutions.',
-        'url': 'https://www.softwarerium.com/blog',
+        'url': 'https://softwarerium.co.za/blog',
         'publisher': {
           '@type': 'Organization',
           'name': 'Softwarerium',
@@ -165,7 +165,7 @@ export default function Blog() {
           'headline': post.title,
           'description': post.excerpt,
           'datePublished': post.date,
-          'url': `https://www.softwarerium.com${post.link}`,
+          'url': `https://softwarerium.co.za${post.link}`,
         })),
       },
     ],

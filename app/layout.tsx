@@ -31,8 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:title" content="Softwarerium - Web Design & Development" />
         <meta property="og:description" content="At Softwarerium, we design and develop tailored software solutions that empower businesses to thrive in the digital age. Whether you need a web platform, a mobile app, or a robust enterprise system, we craft scalable and efficient solutions that fit your unique needs." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softwarerium.com" />
-        <meta property="og:image" content="https://softwarerium.com/preview.jpg" />
+        <meta property="og:url" content="https://softwarerium.co.za" />
+        <meta property="og:image" content="https://softwarerium.co.za/opengraph-image.png" />
         <meta property="og:site_name" content="Softwarerium" />
         <meta property="og:locale" content="en_US" />
 
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Softwarerium - Web Design & Development" />
         <meta name="twitter:description" content="At Softwarerium, we design and develop tailored software solutions that empower businesses to thrive in the digital age. Whether you need a web platform, a mobile app, or a robust enterprise system, we craft scalable and efficient solutions that fit your unique needs." />
-        <meta name="twitter:image" content="https://softwarerium.com/preview.jpg" />
+        <meta name="twitter:image" content="https://softwarerium.co.za/opengraph-image.png" />
         <meta name="twitter:site" content="@Softwarerium" />
         <meta name="twitter:creator" content="@Softwarerium" />
 

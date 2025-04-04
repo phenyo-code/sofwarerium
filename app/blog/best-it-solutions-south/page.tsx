@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'Best IT Solutions in the South | Softwarerium',
     description: 'Tailored IT solutions for Southern businesses from Softwarerium.',
-    url: 'https://www.softwarerium.com/blog/best-it-solutions-south',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/best-it-solutions-south',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function BestItSolutionsSouth() {
     datePublished: '2025-03-29',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/best-it-solutions-south',
+    url: 'https://softwarerium.co.za/blog/best-it-solutions-south',
     keywords: 'IT solutions south, southern business software, Softwarerium',
   };
 

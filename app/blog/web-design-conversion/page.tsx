@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'Crafting Stunning Web Designs That Convert | Softwarerium',
     description: 'Discover how stunning, user-friendly designs drive conversions with Softwarerium.',
-    url: 'https://www.softwarerium.com/blog/web-design-conversion',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/web-design-conversion',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function WebDesignConversion() {
     datePublished: '2025-04-02',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/web-design-conversion',
+    url: 'https://softwarerium.co.za/blog/web-design-conversion',
     keywords: 'web design, conversion-focused design, user psychology, CTAs',
   };
 

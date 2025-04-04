@@ -26,16 +26,16 @@ const SEO = {
   title: 'Desktop Applications | Softwarerium',
   description:
     'Powerful custom desktop applications designed to streamline your business operations and boost productivity. Build software solutions that fit your unique needs.',
-  canonical: 'https://softwarerium.vercel.app/services/desktop-applications', // Updated domain
+  canonical: 'https://softwarerium.co.za/services/desktop-applications', // Updated domain
   openGraph: {
     title: 'Desktop Applications | Softwarerium',
     description:
       'Tailored desktop applications that integrate with your workflows, enhancing business operations and increasing efficiency.',
-    url: 'https://softwarerium.vercel.app/services/desktop-applications',
+    url: 'https://softwarerium.co.za/services/desktop-applications',
     type: 'website',
     images: [
       {
-        url: 'https://softwarerium.vercel.app/images/desktop-app-hero.jpg', // Replace with actual image URL
+        url: 'https://softwarerium.co.za/opengraph-image.png', // Replace with actual image URL
         width: 1200,
         height: 630,
         alt: 'Desktop Applications Preview',
@@ -46,7 +46,7 @@ const SEO = {
     cardType: 'summary_large_image',
     title: 'Desktop Applications | Softwarerium',
     description: 'Custom desktop applications to streamline your business operations and boost productivity.',
-    image: 'https://softwarerium.vercel.app/images/desktop-app-hero.jpg', // Replace with actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with actual image URL
   },
   additionalMetaTags: [
     {
@@ -65,8 +65,8 @@ export default function DesktopApplications() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://softwarerium.vercel.app', // Updated domain
-        logo: 'https://softwarerium.vercel.app/logo.png', // Replace with your logo URL
+        url: 'https://softwarerium.co.za', // Updated domain
+        logo: 'https://softwarerium.co.za/logo.png', // Replace with your logo URL
         description:
           'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: [
@@ -77,7 +77,7 @@ export default function DesktopApplications() {
           '@type': 'ContactPoint',
           telephone: '+1-555-123-4567', // Replace with your phone number
           contactType: 'Customer Service',
-          email: 'info@softwarerium.com', // Replace with your email
+          email: 'info@softwarerium.co.za', // Replace with your email
         },
       },
       {
@@ -87,19 +87,19 @@ export default function DesktopApplications() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://softwarerium.vercel.app',
+            item: 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Services',
-            item: 'https://softwarerium.vercel.app/services',
+            item: 'https://softwarerium.co.za/services',
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Desktop Applications',
-            item: 'https://softwarerium.vercel.app/services/desktop-applications',
+            item: 'https://softwarerium.co.za/services/desktop-applications',
           },
         ],
       },
@@ -110,20 +110,20 @@ export default function DesktopApplications() {
         description:
           'Powerful custom desktop applications designed to streamline your business operations and boost productivity.',
         areaServed: 'Worldwide',
-        image: 'https://softwarerium.vercel.app/images/desktop-app-hero.jpg', // Replace with actual image URL
+        image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with actual image URL
         offers: [
           {
             '@type': 'Offer',
             name: 'Custom Desktop Applications',
             description:
               'Tailored software solutions that integrate with your workflows, enhancing business operations and increasing efficiency.',
-            url: 'https://softwarerium.vercel.app/services/desktop-applications',
+            url: 'https://softwarerium.co.za/services/desktop-applications',
           },
           {
             '@type': 'Offer',
             name: 'Enterprise Desktop Solutions',
             description: 'Scalable software for large organizations to optimize complex operations.',
-            url: 'https://softwarerium.vercel.app/services/desktop-applications',
+            url: 'https://softwarerium.co.za/services/desktop-applications',
           },
         ],
       },

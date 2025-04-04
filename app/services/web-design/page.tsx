@@ -23,13 +23,13 @@ export const metadata = {
   openGraph: {
     title: 'Web Design | Softwarerium',
     description: 'Visually stunning and intuitive web designs tailored to enhance user experience and engagement.',
-    url: 'https://www.softwarerium.com/services/web-design',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/services/web-design',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'Web Design | Softwarerium',
     description: 'Custom web designs that blend aesthetics and functionality to elevate your online presence.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -42,8 +42,8 @@ export default function WebDesign() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://www.softwarerium.com',
-        'logo': 'URL_TO_LOGO', // Replace with actual logo URL
+        'url': 'https://softwarerium.co.za',
+        'logo': 'https://softwarerium.co.za/logo.png', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
           'https://twitter.com/softwarerium',
@@ -63,19 +63,19 @@ export default function WebDesign() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://www.softwarerium.com',
+            'item': 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Services',
-            'item': 'https://www.softwarerium.com/services',
+            'item': 'https://softwarerium.co.za/services',
           },
           {
             '@type': 'ListItem',
             'position': 3,
             'name': 'Web Design',
-            'item': 'https://www.softwarerium.com/services/web-design',
+            'item': 'https://softwarerium.co.za/services/web-design',
           },
         ],
       },
@@ -88,19 +88,19 @@ export default function WebDesign() {
         },
         'description': 'Stunning, user-friendly web designs that captivate your audience and reflect your brand identity.',
         'areaServed': 'Worldwide',
-        'image': 'URL_TO_IMAGE', // Replace with actual image URL
+        'image': 'https://softwarerium.co.za/opengraph-image.png', // Replace with actual image URL
         'offers': [
           {
             '@type': 'Offer',
             'name': 'Web Design Services',
             'description': 'Visually stunning and intuitive web designs tailored to enhance user experience and engagement.',
-            'url': 'https://www.softwarerium.com/services/web-design',
+            'url': 'https://softwarerium.co.za/services/web-design',
           },
           {
             '@type': 'Offer',
             'name': 'Responsive Web Design',
             'description': 'Seamless experiences across all devices and screens.',
-            'url': 'https://www.softwarerium.com/services/web-design',
+            'url': 'https://softwarerium.co.za/services/web-design',
           },
         ],
       },

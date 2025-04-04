@@ -117,16 +117,16 @@ export const metadata = {
   description: 'At Softwarerium, we design and develop tailored software solutions that empower businesses to thrive in the digital age. Whether you need a web platform, a mobile app, or a robust enterprise system, we craft scalable and efficient solutions that fit your unique needs.',
   keywords: 'Softwarerium, web development, mobile apps, desktop applications, custom software solutions, software development company, IT solutions 2025',
   alternates: {
-    canonical: 'https://softwarerium.vercel.app',
+    canonical: 'https://softwarerium.co.za',
   },
   openGraph: {
     title: 'Custom Software Solutions for Modern Businesses |Softwarerium',
     description: 'Transform your business with Softwarerium’s custom web development, mobile apps, and desktop solutions tailored for 2025 success.',
-    url: 'https://softwarerium.vercel.app',
+    url: 'https://softwarerium.co.za',
     siteName: 'Softwarerium',
     images: [
       {
-        url: 'URL_TO_IMAGE',
+        url: 'https://softwarerium.co.za/opengraph-image.png',
         width: 1200,
         height: 630,
         alt: 'Softwarerium Software Solutions',
@@ -137,7 +137,7 @@ export const metadata = {
   twitter: {
     title: 'Custom Software Solutions for Modern Businesses |Softwarerium ',
     description: 'Discover how Softwarerium drives business success with innovative software solutions in 2025.',
-    image: 'URL_TO_IMAGE',
+    image: 'https://softwarerium.co.za/opengraph-image.png',
     card: 'summary_large_image',
     creator: '@softwarerium',
   },
@@ -151,8 +151,8 @@ export default function Home() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://softwarerium.vercel.app',
-        logo: 'URL_TO_LOGO',
+        url: 'https://softwarerium.co.za',
+        logo: 'https://softwarerium.co.za/logo.png',
         description: 'Softwarerium specializes in custom web development, mobile apps, and desktop applications, delivering innovative software solutions for businesses in 2025.',
         sameAs: ['https://twitter.com/softwarerium', 'https://linkedin.com/company/softwarerium'],
         contactPoint: {
@@ -171,13 +171,13 @@ export default function Home() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://softwarerium.vercel.app',
+            item: 'https://softwarerium.co.za',
           },
         ],
       },
       {
         '@type': 'WebSite',
-        url: 'https://softwarerium.vercel.app',
+        url: 'https://softwarerium.co.za',
         name: 'Softwarerium',
         description: 'Softwarerium offers expert software solutions including custom web development, mobile apps, and desktop applications for businesses.',
         inLanguage: 'en-US',

@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'UI/UX Design: The Key to User Engagement | Softwarerium',
     description: 'Learn how intuitive UI/UX design drives engagement with Softwarerium’s expert insights.',
-    url: 'https://www.softwarerium.com/blog/ui-ux-engagement',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/ui-ux-engagement',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function UiUxEngagement() {
     datePublished: '2025-03-31',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/ui-ux-engagement',
+    url: 'https://softwarerium.co.za/blog/ui-ux-engagement',
     keywords: 'UI/UX design, user engagement, usability testing, engagement metrics',
   };
 

@@ -41,8 +41,8 @@ export default function Contact() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://sofwarerium.vercel.app',
-        logo: 'URL_TO_LOGO',
+        url: 'https://softwarerium.co.za',
+        logo: 'https://softwarerium.co.za/logo.png',
         description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: ['https://twitter.com/softwarerium', 'https://linkedin.com/company/softwarerium'],
         contactPoint: [
@@ -50,13 +50,13 @@ export default function Contact() {
             '@type': 'ContactPoint',
             telephone: '+1-555-123-4567',
             contactType: 'Customer Service',
-            email: 'info@softwarerium.com',
+            email: 'info@softwarerium.co.za',
             contactOption: 'TollFree',
             areaServed: 'Worldwide',
           },
           {
             '@type': 'ContactPoint',
-            email: 'info@softwarerium.com',
+            email: 'info@softwarerium.co.za',
             contactType: 'Sales',
             areaServed: 'Worldwide',
           },
@@ -65,15 +65,15 @@ export default function Contact() {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sofwarerium.vercel.app' },
-          { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://sofwarerium.vercel.app/contact' },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://softwarerium.co.za' },
+          { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://softwarerium.co.za/contact' },
         ],
       },
       {
         '@type': 'ContactPage',
         name: 'Contact Softwarerium',
         description: 'Get in touch with Softwarerium for expert software solutions. Reach out via phone, email, or our contact form.',
-        url: 'https://sofwarerium.vercel.app/contact',
+        url: 'https://softwarerium.co.za/contact',
         publisher: { '@type': 'Organization', name: 'Softwarerium' },
       },
     ],
@@ -121,7 +121,7 @@ export default function Contact() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {[
-              { icon: <FaEnvelope size={32} />, title: 'Email Us', desc: 'info@softwarerium.com', href: 'mailto:info@softwarerium.com' },
+              { icon: <FaEnvelope size={32} />, title: 'Email Us', desc: 'info@softwarerium.co.za', href: 'mailto:info@softwarerium.co.za' },
               { icon: <FaPhone size={32} />, title: 'Call Us', desc: '+1 (555) 123-4567', href: 'tel:+15551234567' },
               { icon: <FaMapMarkerAlt size={32} />, title: 'Visit Us', desc: '123 Innovation Drive, Tech City, TC 45678', href: '#' },
             ].map((item, index) => (

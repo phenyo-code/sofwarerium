@@ -22,13 +22,13 @@ export const metadata = {
   openGraph: {
     title: 'About Us | Softwarerium',
     description: 'Learn about Softwarerium’s passion for empowering businesses with cutting-edge web and software solutions.',
-    url: 'https://sofwarerium.vercel.app/about',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/about',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'About Us | Softwarerium',
     description: 'Meet Softwarerium, a team innovating web and software solutions since 2025.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -41,7 +41,7 @@ export default function About() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://sofwarerium.vercel.app',
+        'url': 'https://softwarerium.co.za',
         'logo': 'URL_TO_LOGO', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'foundingDate': '2025',
@@ -64,13 +64,13 @@ export default function About() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://sofwarerium.vercel.app',
+            'item': 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'About',
-            'item': 'https://sofwarerium.vercel.app/about',
+            'item': 'https://softwarerium.co.za/about',
           },
         ],
       },
@@ -78,7 +78,7 @@ export default function About() {
         '@type': 'AboutPage',
         'name': 'About Softwarerium',
         'description': 'Discover Softwarerium’s journey, mission, and values. We’re a team dedicated to crafting innovative software and web solutions since 2025.',
-        'url': 'https://sofwarerium.vercel.app/about',
+        'url': 'https://softwarerium.co.za/about',
         'publisher': {
           '@type': 'Organization',
           'name': 'Softwarerium',

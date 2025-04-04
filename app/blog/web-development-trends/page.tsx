@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'The Future of Web Development: Trends to Watch | Softwarerium',
     description: 'Discover cutting-edge web development trends for 2025 with Softwarerium.',
-    url: 'https://www.softwarerium.com/blog/web-development-trends',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/web-development-trends',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function WebDevelopmentTrends() {
     datePublished: '2025-04-10',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/web-development-trends',
+    url: 'https://softwarerium.co.za/blog/web-development-trends',
     keywords: 'web development trends, PWAs, WebAssembly, AI integration',
   };
 

@@ -19,8 +19,8 @@ export const metadata = {
   openGraph: {
     title: 'Educational Platform for ReactLab | Softwarerium',
     description: 'Softwarerium’s interactive e-learning solution for ReactLab with scalable features.',
-    url: 'https://softwarerium.vercel.app/projects/reactlab',
-    image: 'https://softwarerium.vercel.app/ReactLab.png',
+    url: 'https://softwarerium.co.za/projects/reactlab',
+    image: 'https://softwarerium.co.za/ReactLab.png',
   },
 };
 
@@ -30,8 +30,8 @@ export default function ReactLabProject() {
     '@type': 'CreativeWork',
     name: 'Educational Platform for ReactLab',
     description: 'An interactive and scalable e-learning platform with course management features, built by Softwarerium.',
-    url: 'https://softwarerium.vercel.app/projects/reactlab',
-    image: 'https://softwarerium.vercel.app/ReactLab.png',
+    url: 'https://softwarerium.co.za/projects/reactlab',
+    image: 'https://softwarerium.co.za/ReactLab.png',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     datePublished: '2025-04-02',
   };
@@ -44,7 +44,7 @@ export default function ReactLabProject() {
         description="An interactive e-learning experience."
         ctaText="Contact Us"
         ctaLink="/contact"
-        bgImage="https://softwarerium.vercel.app/ReactLab.png"
+        bgImage="https://softwarerium.co.za/ReactLab.png"
       />
       <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">

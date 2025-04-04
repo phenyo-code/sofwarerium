@@ -19,8 +19,8 @@ export const metadata = {
   openGraph: {
     title: 'Portfolio Site for DesignCraft | Softwarerium',
     description: 'Softwarerium’s visually stunning portfolio for DesignCraft’s creative work.',
-    url: 'https://softwarerium.vercel.app/projects/design-craft',
-    image: 'https://softwarerium.vercel.app/DesignCraftImg.png',
+    url: 'https://softwarerium.co.za/projects/design-craft',
+    image: 'https://softwarerium.co.za/DesignCraftImg.png',
   },
 };
 
@@ -30,8 +30,8 @@ export default function DesignCraftProject() {
     '@type': 'CreativeWork',
     name: 'Portfolio Site for DesignCraft',
     description: 'A visually stunning portfolio showcasing DesignCraft’s creative work, built by Softwarerium.',
-    url: 'https://softwarerium.vercel.app/projects/design-craft',
-    image: 'https://softwarerium.vercel.app/DesignCraftImg.png',
+    url: 'https://softwarerium.co.za/projects/design-craft',
+    image: 'https://softwarerium.co.za/DesignCraftImg.png',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     datePublished: '2025-04-02',
   };
@@ -45,7 +45,7 @@ export default function DesignCraftProject() {
         description="A creative showcase of stunning design work."
         ctaText="Contact Us"
         ctaLink="/contact"
-        bgImage="https://softwarerium.vercel.app/DesignCraftImg.png"
+        bgImage="https://softwarerium.co.za/DesignCraftImg.png"
       />
       <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">

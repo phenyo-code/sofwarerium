@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'SEO Strategies to Skyrocket Your Rankings | Softwarerium',
     description: 'Boost your site’s visibility with expert SEO tactics from Softwarerium.',
-    url: 'https://www.softwarerium.com/blog/seo-strategies',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/seo-strategies',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function SeoStrategies() {
     datePublished: '2025-04-04',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/seo-strategies',
+    url: 'https://softwarerium.co.za/blog/seo-strategies',
     keywords: 'SEO strategies, improve rankings, organic traffic',
   };
 

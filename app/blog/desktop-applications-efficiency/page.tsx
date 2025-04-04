@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'Streamlining Operations with Desktop Applications | Softwarerium',
     description: 'Discover how desktop apps optimize workflows with Softwarerium’s expert insights.',
-    url: 'https://www.softwarerium.com/blog/desktop-applications-efficiency',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/desktop-applications-efficiency',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function DesktopApplicationsEfficiency() {
     datePublished: '2025-04-08',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/desktop-applications-efficiency',
+    url: 'https://softwarerium.co.za/blog/desktop-applications-efficiency',
     keywords: 'desktop applications, business efficiency, custom software',
   };
 

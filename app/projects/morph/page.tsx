@@ -19,8 +19,8 @@ export const metadata = {
   openGraph: {
     title: 'Corporate Website for Morph | Softwarerium',
     description: 'Softwarerium’s professional CMS site for Morph with robust functionality.',
-    url: 'https://softwarerium.vercel.app/projects/morph',
-    image: 'https://softwarerium.vercel.app/MorphBuilder.png',
+    url: 'https://softwarerium.co.za/projects/morph',
+    image: 'https://softwarerium.co.za/MorphBuilder.png',
   },
 };
 
@@ -30,8 +30,8 @@ export default function MorphProject() {
     '@type': 'CreativeWork',
     name: 'Corporate Website for Morph',
     description: 'A professional Content Management System website built by Softwarerium for Morph.',
-    url: 'https://softwarerium.vercel.app/projects/morph',
-    image: 'https://softwarerium.vercel.app/MorphBuilder.png',
+    url: 'https://softwarerium.co.za/projects/morph',
+    image: 'https://softwarerium.co.za/MorphBuilder.png',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     datePublished: '2025-04-02',
   };
@@ -44,7 +44,7 @@ export default function MorphProject() {
         description="A robust CMS solution for corporate needs."
         ctaText="Contact Us"
         ctaLink="/contact"
-        bgImage="https://softwarerium.vercel.app/MorphBuilder.png"
+        bgImage="https://softwarerium.co.za/MorphBuilder.png"
       />
       <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">

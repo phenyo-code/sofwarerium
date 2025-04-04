@@ -38,13 +38,13 @@ export const metadata = {
   openGraph: {
     title: 'Services | Softwarerium',
     description: 'Tailored software solutions to elevate your digital presence across web, mobile, and desktop platforms.',
-    url: 'https://sofwarerium.vercel.app/services',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/services',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'Services | Softwarerium',
     description: 'Discover Softwarerium’s comprehensive services for your business’s digital needs.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -57,7 +57,7 @@ export default function Services() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://sofwarerium.vercel.app',
+        url: 'https://softwarerium.co.za',
         logo: 'URL_TO_LOGO', // Replace with your logo URL
         description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: [
@@ -78,13 +78,13 @@ export default function Services() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://sofwarerium.vercel.app',
+            item: 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Services',
-            item: 'https://sofwarerium.vercel.app/services',
+            item: 'https://softwarerium.co.za/services',
           },
         ],
       },
@@ -100,7 +100,7 @@ export default function Services() {
           '@type': 'Offer',
           name: service.name,
           description: service.description,
-          url: `https://sofwarerium.vercel.app/services/${service.slug}`,
+          url: `https://softwarerium.co.za/services/${service.slug}`,
         })),
       },
     ],

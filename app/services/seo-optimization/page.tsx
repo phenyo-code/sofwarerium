@@ -22,13 +22,13 @@ export const metadata = {
   openGraph: {
     title: 'SEO Optimization | Softwarerium',
     description: 'Data-driven SEO services to elevate your online visibility and convert visitors into customers.',
-    url: 'https://www.softwarerium.com/services/seo-optimization',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/services/seo-optimization',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'SEO Optimization | Softwarerium',
     description: 'Proven SEO strategies to improve your search rankings and grow your business organically.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -41,8 +41,8 @@ export default function SEOOptimization() {
       {
         '@type': 'Organization',
         'name': 'Softwarerium',
-        'url': 'https://www.softwarerium.com',
-        'logo': 'URL_TO_LOGO', // Replace with actual logo URL
+        'url': 'https://softwarerium.co.za',
+        'logo': 'https://softwarerium.co.za/logo.png', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'sameAs': [
           'https://twitter.com/softwarerium',
@@ -62,19 +62,19 @@ export default function SEOOptimization() {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Home',
-            'item': 'https://www.softwarerium.com',
+            'item': 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Services',
-            'item': 'https://www.softwarerium.com/services',
+            'item': 'https://softwarerium.co.za/services',
           },
           {
             '@type': 'ListItem',
             'position': 3,
             'name': 'SEO Optimization',
-            'item': 'https://www.softwarerium.com/services/seo-optimization',
+            'item': 'https://softwarerium.co.za/services/seo-optimization',
           },
         ],
       },
@@ -87,19 +87,19 @@ export default function SEOOptimization() {
         },
         'description': 'Boost your search engine rankings and drive organic traffic with Softwarerium’s proven SEO strategies.',
         'areaServed': 'Worldwide',
-        'image': 'URL_TO_IMAGE', // Replace with actual image URL
+        'image': 'https://softwarerium.co.za/opengraph-image.png', // Replace with actual image URL
         'offers': [
           {
             '@type': 'Offer',
             'name': 'SEO Optimization Services',
             'description': 'Data-driven SEO services to elevate your online visibility and convert visitors into customers.',
-            'url': 'https://www.softwarerium.com/services/seo-optimization',
+            'url': 'https://softwarerium.co.za/services/seo-optimization',
           },
           {
             '@type': 'Offer',
             'name': 'Keyword Research & Strategy',
             'description': 'Targeting high-value keywords to attract your ideal audience.',
-            'url': 'https://www.softwarerium.com/services/seo-optimization',
+            'url': 'https://softwarerium.co.za/services/seo-optimization',
           },
         ],
       },

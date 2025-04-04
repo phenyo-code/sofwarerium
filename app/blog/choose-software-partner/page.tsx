@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'How to Choose the Right Software Development Partner | Softwarerium',
     description: 'Find the perfect software development partner with Softwarerium’s 2025 guide.',
-    url: 'https://www.softwarerium.com/blog/choose-software-partner',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/choose-software-partner',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function ChooseSoftwarePartner() {
     datePublished: '2025-03-27',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/choose-software-partner',
+    url: 'https://softwarerium.co.za/blog/choose-software-partner',
     keywords: 'software development partner, tech partner selection, expertise, communication',
   };
 

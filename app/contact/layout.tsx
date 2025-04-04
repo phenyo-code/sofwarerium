@@ -16,13 +16,13 @@ export const metadata = {
     openGraph: {
       title: 'Contact Us | Softwarerium',
       description: 'Contact Softwarerium to discuss your next project. We’re here to help with web, mobile, and more.',
-      url: 'https://sofwarerium.vercel.app/contact',
-      image: 'URL_TO_IMAGE', // Replace with an actual image URL
+      url: 'https://softwarerium.co.za/contact',
+      image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     },
     twitter: {
       title: 'Contact Us | Softwarerium',
       description: 'Reach out to Softwarerium for custom software solutions tailored to your needs.',
-      image: 'URL_TO_IMAGE', // Replace with an actual image URL
+      image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
       card: 'summary_large_image',
     },
   };

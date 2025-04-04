@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'Mobile Apps in 2025: What’s Next for iOS and Android | Softwarerium',
     description: 'Stay ahead with the latest mobile app trends for 2025 from Softwarerium.',
-    url: 'https://www.softwarerium.com/blog/mobile-app-trends-2025',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/mobile-app-trends-2025',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function MobileAppTrends2025() {
     datePublished: '2025-04-06',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/mobile-app-trends-2025',
+    url: 'https://softwarerium.co.za/blog/mobile-app-trends-2025',
     keywords: 'mobile app trends, iOS, Android, AR, 5G, cross-platform development',
   };
 

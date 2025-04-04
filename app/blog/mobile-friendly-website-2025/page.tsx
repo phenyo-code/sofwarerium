@@ -17,8 +17,8 @@ export const metadata = {
   openGraph: {
     title: 'Why Your Business Needs a Mobile-Friendly Website in 2025 | Softwarerium',
     description: 'Explore the importance of mobile-friendly websites for SEO and UX with Softwarerium.',
-    url: 'https://www.softwarerium.com/blog/mobile-friendly-website-2025',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/blog/mobile-friendly-website-2025',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
 };
 
@@ -31,7 +31,7 @@ export default function MobileFriendlyWebsite2025() {
     datePublished: '2025-03-25',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     publisher: { '@type': 'Organization', name: 'Softwarerium', logo: 'URL_TO_LOGO' },
-    url: 'https://www.softwarerium.com/blog/mobile-friendly-website-2025',
+    url: 'https://softwarerium.co.za/blog/mobile-friendly-website-2025',
     keywords: 'mobile-friendly website, mobile SEO, mobile-first indexing, responsive design',
   };
 

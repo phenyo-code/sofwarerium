@@ -24,13 +24,13 @@ export const metadata = {
   openGraph: {
     title: 'Mobile App Development | Softwarerium',
     description: 'High-performance mobile apps built for iOS and Android to enhance user engagement and streamline your business.',
-    url: 'https://www.softwarerium.com/services/mobile-app-development',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    url: 'https://softwarerium.co.za/services/mobile-app-development',
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
   },
   twitter: {
     title: 'Mobile App Development | Softwarerium',
     description: 'Custom mobile apps for iOS and Android that deliver speed, scalability, and a seamless user experience.',
-    image: 'URL_TO_IMAGE', // Replace with an actual image URL
+    image: 'https://softwarerium.co.za/opengraph-image.png', // Replace with an actual image URL
     card: 'summary_large_image',
   },
 };
@@ -43,8 +43,8 @@ export default function MobileAppDevelopment() {
       {
         '@type': 'Organization',
         name: 'Softwarerium',
-        url: 'https://www.softwarerium.com',
-        logo: 'URL_TO_LOGO', // Replace with your logo URL
+        url: 'https://softwarerium.co.za',
+        logo: 'https://softwarerium.co.za/logo.png', // Replace with your logo URL
         description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: [
           'https://twitter.com/softwarerium', // Replace with your social media URLs
@@ -64,19 +64,19 @@ export default function MobileAppDevelopment() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.softwarerium.com',
+            item: 'https://softwarerium.co.za',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Services',
-            item: 'https://www.softwarerium.com/services',
+            item: 'https://softwarerium.co.za/services',
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Mobile App Development',
-            item: 'https://www.softwarerium.com/services/mobile-app-development',
+            item: 'https://softwarerium.co.za/services/mobile-app-development',
           },
         ],
       },
@@ -92,7 +92,7 @@ export default function MobileAppDevelopment() {
           '@type': 'Offer',
           name: 'Custom Mobile App Development',
           description: 'High-performance mobile apps built for iOS and Android to enhance user engagement and streamline your business.',
-          url: 'https://www.softwarerium.com/services/mobile-app-development',
+          url: 'https://softwarerium.co.za/services/mobile-app-development',
         },
       },
     ],

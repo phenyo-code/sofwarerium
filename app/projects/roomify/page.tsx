@@ -19,8 +19,8 @@ export const metadata = {
   openGraph: {
     title: 'Real Estate Portal for Roomify | Softwarerium',
     description: 'Softwarerium’s sleek real estate platform for Roomify’s property transactions.',
-    url: 'https://softwarerium.vercel.app/projects/roomify',
-    image: 'https://softwarerium.vercel.app/Roomify.png',
+    url: 'https://softwarerium.co.za/projects/roomify',
+    image: 'https://softwarerium.co.za/Roomify.png',
   },
 };
 
@@ -30,8 +30,8 @@ export default function RoomifyProject() {
     '@type': 'CreativeWork',
     name: 'Real Estate Portal for Roomify',
     description: 'A sleek, user-friendly real estate platform for buying, renting, and selling properties, built by Softwarerium.',
-    url: 'https://softwarerium.vercel.app/projects/roomify',
-    image: 'https://softwarerium.vercel.app/Roomify.png',
+    url: 'https://softwarerium.co.za/projects/roomify',
+    image: 'https://softwarerium.co.za/Roomify.png',
     author: { '@type': 'Organization', name: 'Softwarerium' },
     datePublished: '2025-04-02',
   };
@@ -44,7 +44,7 @@ export default function RoomifyProject() {
         description="A seamless platform for property transactions."
         ctaText="Contact Us"
         ctaLink="/contact"
-        bgImage="https://softwarerium.vercel.app/Roomify.png"
+        bgImage="https://softwarerium.co.za/Roomify.png"
       />
       <nav className="py-4 bg-white" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 sm:px-6">

@@ -87,7 +87,7 @@ export default function ChatPage() {
       switch (step) {
         case 0:
           if (input === '1') { setStep(1); simulateTyping('Awesome! Let’s start with your name ?', () => {}); }
-          else if (input === '2') { simulateTyping('For support, email support@softwarerium.com or describe your issue here!', () => {}); }
+          else if (input === '2') { simulateTyping('For support, email support@softwarerium.co.za or describe your issue here!', () => {}); }
           else if (input === '3') { simulateTyping('Cool! What’s on your mind?', () => {}); }
           else { simulateTyping('Hmm, I couldnt understand that, please reply "1" to get started!', () => {}); }
           break;
