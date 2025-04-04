@@ -48,17 +48,17 @@ export default function Contact() {
         contactPoint: [
           {
             '@type': 'ContactPoint',
-            telephone: '+1-555-123-4567',
+            telephone: '+27 74 755 3247',
             contactType: 'Customer Service',
             email: 'info@softwarerium.co.za',
             contactOption: 'TollFree',
-            areaServed: 'Worldwide',
+            areaServed: 'South Africa',
           },
           {
             '@type': 'ContactPoint',
             email: 'info@softwarerium.co.za',
             contactType: 'Sales',
-            areaServed: 'Worldwide',
+            areaServed: 'South Africa',
           },
         ],
       },
@@ -122,7 +122,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {[
               { icon: <FaEnvelope size={32} />, title: 'Email Us', desc: 'info@softwarerium.co.za', href: 'mailto:info@softwarerium.co.za' },
-              { icon: <FaPhone size={32} />, title: 'Call Us', desc: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+              { icon: <FaPhone size={32} />, title: 'Call Us', desc: '+27 74 755 3247', href: 'tel:+27747553237' },
               { icon: <FaMapMarkerAlt size={32} />, title: 'Visit Us', desc: '123 Innovation Drive, Tech City, TC 45678', href: '#' },
             ].map((item, index) => (
               <a

@@ -58,7 +58,7 @@ export default function Services() {
         '@type': 'Organization',
         name: 'Softwarerium',
         url: 'https://softwarerium.co.za',
-        logo: 'URL_TO_LOGO', // Replace with your logo URL
+        logo: 'https://softwarerium.co.za/logo.png', // Replace with your logo URL
         description: 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         sameAs: [
           'https://twitter.com/softwarerium', // Replace with your social media URLs
@@ -66,9 +66,9 @@ export default function Services() {
         ],
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+1-555-123-4567', // Replace with your phone number
+          telephone: '+27-74-755-3247', // Replace with your phone number
           contactType: 'Customer Service',
-          email: 'info@softwarerium.com', // Replace with your email
+          email: 'info@softwarerium.co.za', // Replace with your email
         },
       },
       {

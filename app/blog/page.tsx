@@ -129,9 +129,9 @@ export default function Blog() {
         ],
         'contactPoint': {
           '@type': 'ContactPoint',
-          'telephone': '+1-555-123-4567', // Replace with your phone number
+          'telephone': '+27-755-3247', // Replace with your phone number
           'contactType': 'Customer Service',
-          'email': 'info@softwarerium.com', // Replace with your email
+          'email': 'info@softwarerium.co.za', // Replace with your email
         },
       },
       {

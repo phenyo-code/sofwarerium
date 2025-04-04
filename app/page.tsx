@@ -157,9 +157,9 @@ export default function Home() {
         sameAs: ['https://twitter.com/softwarerium', 'https://linkedin.com/company/softwarerium'],
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+1-555-123-4567',
+          telephone: '+27 74 755 3247',
           contactType: 'Customer Service',
-          email: 'info@softwarerium.com',
+          email: 'info@softwarerium.co.za',
           areaServed: 'South Africa',
           availableLanguage: 'English',
         },

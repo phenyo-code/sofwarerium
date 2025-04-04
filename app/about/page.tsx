@@ -42,7 +42,7 @@ export default function About() {
         '@type': 'Organization',
         'name': 'Softwarerium',
         'url': 'https://softwarerium.co.za',
-        'logo': 'URL_TO_LOGO', // Replace with actual logo URL
+        'logo': 'https://softwarerium.co.za/logo.png', // Replace with actual logo URL
         'description': 'Expert software solutions designed to propel your business forward through innovation, scalability, and excellence.',
         'foundingDate': '2025',
         'sameAs': [
@@ -51,10 +51,10 @@ export default function About() {
         ],
         'contactPoint': {
           '@type': 'ContactPoint',
-          'telephone': '+1-555-123-4567', // Replace with actual phone number
+          'telephone': '+27 74 755 3247', // Replace with actual phone number
           'contactType': 'Customer Service',
-          'email': 'info@softwarerium.com', // Replace with actual email
-          'areaServed': 'Worldwide',
+          'email': 'info@softwarerium.co.za', // Replace with actual email
+          'areaServed': 'South Africa',
         },
       },
       {

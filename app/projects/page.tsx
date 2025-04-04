@@ -93,7 +93,7 @@ export default function Projects() {
         ],
         'contactPoint': {
           '@type': 'ContactPoint',
-          'telephone': '+1-555-123-4567', // Replace with actual phone number
+          'telephone': '+27 74 755 3247', // Replace with actual phone number
           'contactType': 'Customer Service',
           'email': 'info@softwarerium.co.za', // Replace with actual email
         },
