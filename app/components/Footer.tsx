@@ -38,10 +38,10 @@ const Footer = () => {
             {[
               'Web Development',
               'Desktop Applications',
-              'Mobile App Development',
+              'Mobile-App Development',
               'SEO Optimization',
               'Web Design',
-              'UI/UX Design',
+              'UI-UX Design',
             ].map((service) => (
               <li key={service}>
                 <Link
