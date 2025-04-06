@@ -39,6 +39,7 @@ interface Service {
   name: string;
   description: string;
   icon: JSX.Element;
+  slug: string;
 }
 
 interface BlogPost {
@@ -80,9 +81,9 @@ const featuredProjects: FeaturedProject[] = [
 ];
 
 const services: Service[] = [
-  { name: 'Web Development', description: 'Custom web development services for scalable, SEO-optimized websites using cutting-edge technology.', icon: <RiCodeSSlashLine size={40} /> },
-  { name: 'Desktop Applications', description: 'Tailored desktop application development to enhance business efficiency and performance.', icon: <IoIosDesktop size={40} /> },
-  { name: 'Mobile Applications', description: 'High-quality mobile app development for iOS and Android to engage your audience.', icon: <CiMobile3 size={40} /> },
+  { name: 'Custom Web Development', slug: 'web-development', description: 'Scalable, SEO-optimized websites with cutting-edge technology.', icon: <RiCodeSSlashLine size={24} /> },
+  { name: 'Mobile App Development', slug: 'mobile-app-development', description: 'High-performance mobile apps for iOS and Android.', icon: <CiMobile3 size={24} /> },
+  { name: 'Desktop Software Solutions', slug: 'desktop-applications', description: 'Powerful, tailored desktop software for your business.', icon: <IoIosDesktop size={24} /> },
 ];
 
 const blogPosts: BlogPost[] = [
@@ -113,10 +114,10 @@ const blogPosts: BlogPost[] = [
 ];
 
 // Enhanced Metadata for SEO (Optimized for Service Keywords)
-export const metadata = {
-  title: 'Softwarerium | Custom Web Development, Mobile Apps & Desktop Solutions',
-  description: 'Softwarerium offers expert web development, mobile app development, and desktop application services. Boost your business with custom software solutions designed for 2025 success.',
-  keywords: 'custom web development, mobile app development, desktop applications, software development services, Softwarerium, SEO-friendly websites, IT solutions 2025, South Africa software company',
+  export const metadata = {
+    title: 'Custom Web Development, Mobile Apps, Desktop Solutions & More | Softwarerium',
+    description: 'Softwarerium offers expert custom web development, mobile app development, desktop software solutions, SEO optimization, and UI/UX design services for 2025 success.',
+    keywords: 'custom web development, mobile app development, desktop software solutions, SEO optimization, web design, UI/UX design, Softwarerium, IT solutions 2025, South Africa software company',
   alternates: {
     canonical: 'https://softwarerium.co.za',
   },
@@ -253,10 +254,11 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service) => (
               <article
-                key={service.name}
-                className="p-6 sm:p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-                style={{ background: colors.white }}
-              >
+              key={service.name}
+              className="p-6 sm:p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              style={{ background: colors.white }}
+            >
+              <div className="text-center">
                 <div
                   className="mb-4 sm:mb-6 mx-auto w-14 sm:w-16 h-14 sm:h-16 flex items-center justify-center rounded-full transition-transform duration-300 hover:scale-110"
                   style={{ color: colors.primary, background: `${colors.primary}15` }}
@@ -265,15 +267,26 @@ export default function Home() {
                   {service.icon}
                 </div>
                 <h2
-                  className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-center transition-colors duration-300 hover:text-primary"
+                  className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 transition-colors duration-300 hover:text-primary"
                   style={{ color: colors.black }}
                 >
                   {service.name}
                 </h2>
-                <p className="text-sm sm:text-base text-center" style={{ color: colors.gray }}>
+                <p
+                  className="text-sm sm:text-base mb-4"
+                  style={{ color: colors.gray }}
+                >
                   {service.description}
                 </p>
-              </article>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="flex items-center justify-center text-sm sm:text-base font-medium transition-colors duration-300 hover:underline"
+                  style={{ color: colors.primary }}
+                >
+                  Learn More
+                </Link>
+              </div>
+            </article>
             ))}
           </div>
           <div className="text-center mt-8 sm:mt-12">

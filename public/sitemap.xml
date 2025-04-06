@@ -1,148 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages (High Priority, Sitelink Candidates) -->
   <url>
     <loc>https://softwarerium.co.za/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/home</loc>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/about</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/services</loc>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://softwarerium.co.za/services/web-development</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://softwarerium.co.za/projects</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://softwarerium.co.za/services/desktop-applications</loc>
+    <loc>https://softwarerium.co.za/blog</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://softwarerium.co.za/contact</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Key Service Pages (Sitelink Candidates) -->
+  <url>
+    <loc>https://softwarerium.co.za/services/web-development</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/services/mobile-app-development</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://softwarerium.co.za/services/desktop-applications</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/services/seo-optimization</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/services/web-design</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/services/ui-ux-design</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://softwarerium.co.za/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
+  <!-- Key Blog Posts (Selective, Sitelink Potential) -->
   <url>
     <loc>https://softwarerium.co.za/blog/web-development-trends</loc>
+    <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/blog/desktop-applications-efficiency</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/blog/mobile-app-trends-2025</loc>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://softwarerium.co.za/blog/seo-strategies</loc>
+    <loc>https://softwarerium.co.za/blog/desktop-applications-efficiency</loc>
+    <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://softwarerium.co.za/blog/web-design-conversion</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/blog/ui-ux-engagement</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/blog/best-it-solutions-south</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/blog/choose-software-partner</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/blog/mobile-friendly-website-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/projects</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
+  <!-- Key Projects (Selective, Sitelink Potential) -->
   <url>
     <loc>https://softwarerium.co.za/projects/flare</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/projects/design-craft</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://softwarerium.co.za/projects/morph</loc>
+    <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://softwarerium.co.za/projects/reactlab</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/projects/roomify</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/projects/light-docs</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://softwarerium.co.za/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Additional Utility Page -->
   <url>
     <loc>https://softwarerium.co.za/chat</loc>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

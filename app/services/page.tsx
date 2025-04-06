@@ -20,19 +20,19 @@ const colors = {
 
 // Services data (enhanced descriptions for SEO)
 const services = [
-  { name: 'Web Development', slug: 'web-development', description: 'Custom web development services delivering scalable, SEO-optimized websites with cutting-edge technology.', icon: <RiCodeSSlashLine size={24} /> },
-  { name: 'Desktop Applications', slug: 'desktop-applications', description: 'Expert desktop application development to create powerful, tailored software for your business.', icon: <IoIosDesktop size={24} /> },
-  { name: 'Mobile App Development', slug: 'mobile-app-development', description: 'High-performance mobile app development services for iOS and Android to engage your audience.', icon: <CiMobile3 size={24} /> },
-  { name: 'SEO Optimization', slug: 'seo-optimization', description: 'Proven SEO optimization services to boost your search rankings and drive organic traffic.', icon: <FaSearch size={24} /> },
-  { name: 'Web Design', slug: 'web-design', description: 'Professional web design services crafting stunning, user-friendly websites that reflect your brand.', icon: <RiPaintFill size={24} /> },
-  { name: 'UI/UX Design', slug: 'ui-ux-design', description: 'Top-tier UI/UX design services for intuitive, engaging user experiences across digital platforms.', icon: <SiMaterialdesignicons size={24} /> },
+  { name: 'Custom Web Development', slug: 'web-development', description: 'Scalable, SEO-optimized websites with cutting-edge technology.', icon: <RiCodeSSlashLine size={24} /> },
+  { name: 'Mobile App Development', slug: 'mobile-app-development', description: 'High-performance mobile apps for iOS and Android.', icon: <CiMobile3 size={24} /> },
+  { name: 'Desktop Software Solutions', slug: 'desktop-applications', description: 'Powerful, tailored desktop software for your business.', icon: <IoIosDesktop size={24} /> },
+  { name: 'SEO Optimization Services', slug: 'seo-optimization', description: 'Boost your online visibility with expert SEO strategies.', icon: <FaSearch size={24} /> }, // New icon
+  { name: 'Professional Web Design', slug: 'web-design', description: 'Stunning, user-friendly web designs to elevate your brand.', icon: <RiPaintFill size={24} /> },
+  { name: 'UI/UX Design Services', slug: 'ui-ux-design', description: 'Intuitive UI/UX designs for exceptional user experiences.', icon: <SiMaterialdesignicons size={24} /> },
 ];
 
 // Enhanced Metadata for SEO
 export const metadata = {
-  title: 'Softwarerium Services | Web Development, Mobile Apps, SEO & More',
-  description: 'Explore Softwarerium’s expert services in custom web development, mobile app development, desktop applications, SEO optimization, web design, and UI/UX design to elevate your business in 2025.',
-  keywords: 'web development services, mobile app development, desktop application development, SEO optimization services, web design services, UI/UX design services, Softwarerium South Africa',
+  title: 'Softwarerium Services | Custom Web Development, Mobile Apps, Desktop Solutions & More',
+  description: 'Softwarerium offers expert custom web development, mobile app development, desktop software solutions, SEO optimization, and UI/UX design services for 2025 success.',
+  keywords: 'custom web development, mobile app development, desktop software solutions, SEO optimization, web design, UI/UX design, Softwarerium, IT solutions 2025, South Africa software company',
   alternates: {
     canonical: 'https://softwarerium.co.za/services',
   },
